@@ -1,0 +1,1316 @@
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Initializing cgroup subsys cpu
+[    0.000000] Initializing cgroup subsys cpuacct
+[    0.000000] Linux version 3.10.52 (sjg@Server100) (gcc version 4.8.3 (OpenWrt/Linaro GCC 4.8-2014.04 r49389) ) #1 SMP PREEMPT Tue Aug 22 14:52:53 CST 2023
+[    0.000000] CPU: ARMv7 Processor [410fc051] revision 1 (ARMv7), cr=10c53c7d
+[    0.000000] CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+[    0.000000] Machine: ACTIONS OWL SoC (Flattened Device Tree), model: ats3605
+[    0.000000] bootconsole [earlycon0] enabled
+[    0.000000] Malformed early option 'androidboot.serialno'
+[    0.000000] Malformed early option 'dvfslevel'
+[    0.000000] Malformed early option 'bootdev'
+[    0.000000] owl_reserve()
+[    0.000000] [OWL] ion_heap_pmem: base 0x6000000, size 0x2000000
+[    0.000000] cma: CMA: reserved 24 MiB at 0e800000
+[    0.000000] Memory policy: ECC disabled, Data cache writealloc
+[    0.000000] BUG: mapping for 0x80000000 at 0xffffa000 out of vmalloc space
+[    0.000000] On node 0 totalpages: 65536
+[    0.000000] free_area_init_node: node 0, pgdat c0725040, node_mem_map c076b000
+[    0.000000]   Normal zone: 512 pages used for memmap
+[    0.000000]   Normal zone: 0 pages reserved
+[    0.000000]   Normal zone: 65536 pages, LIFO batch:15
+[    0.000000] owl_smp_init()
+[    0.000000] owl_smp_init_cpus(): ncores 4
+[    0.000000] owl_init_early ()
+[    0.000000] PERCPU: Embedded 8 pages/cpu @c097a000 s9344 r8192 d15232 u32768
+[    0.000000] pcpu-alloc: s9344 r8192 d15232 u32768 alloc=8*4096
+[    0.000000] pcpu-alloc: [0] 0 [0] 1 [0] 2 [0] 3 
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 65024
+[    0.000000] Kernel command line: fb_logo_reserve=0x2000000,0x280000 console=ttyS5,115200 earlyprintk no_console_suspend loglevel=7 clk_ignore_unused androidboot.mode=charger  androidboot.serialno=b5de0a7800000000 dvfslevel=0x40718583  bootdev=nand noinitrd root=/dev/nand0p4 rootfstype=squashfs init=/bin/init
+[    0.000000] owl bootmode: charger
+[    0.000000] PID hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.000000] Dentry cache hash table entries: 32768 (order: 5, 131072 bytes)
+[    0.000000] Inode-cache hash table entries: 16384 (order: 4, 65536 bytes)
+[    0.000000] Memory: 256MB = 256MB total
+[    0.000000] Memory: 190736k/190736k available, 71408k reserved, 0K highmem
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+[    0.000000]     fixmap  : 0xfff00000 - 0xfffe0000   ( 896 kB)
+[    0.000000]     vmalloc : 0xd0800000 - 0xff000000   ( 744 MB)
+[    0.000000]     lowmem  : 0xc0000000 - 0xd0000000   ( 256 MB)
+[    0.000000]     pkmap   : 0xbfe00000 - 0xc0000000   (   2 MB)
+[    0.000000]     modules : 0xbf000000 - 0xbfe00000   (  14 MB)
+[    0.000000]       .text : 0xc0008000 - 0xc06a6870   (6779 kB)
+[    0.000000]       .init : 0xc06a7000 - 0xc06da480   ( 206 kB)
+[    0.000000]       .data : 0xc06dc000 - 0xc0725f80   ( 296 kB)
+[    0.000000]        .bss : 0xc0725f80 - 0xc076a984   ( 275 kB)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+[    0.000000] Preemptible hierarchical RCU implementation.
+[    0.000000] NR_IRQS:223
+[    0.000000] [OWL] init sirqs, nr_sirq 3
+[    0.000000] owl_time_init()
+[    0.000000] [OWL] ats3605 clock initialization
+[    0.000000] [ats3605] timer initialization
+[    0.000000] sched_clock: 32 bits at 24MHz, resolution 41ns, wraps every 178956969942ns
+[    0.000000] Console: colour dummy device 80x30
+[    0.012926] Calibrating delay loop... 449.74 BogoMIPS (lpj=2248704)
+[    0.071053] pid_max: default: 32768 minimum: 301
+[    0.075906] Mount-cache hash table entries: 512
+[    0.087998] Initializing cgroup subsys freezer
+[    0.092507] Initializing cgroup subsys net_cls
+[    0.096861] Initializing cgroup subsys perf_event
+[    0.101785] CPU: Testing write buffer coherency: ok
+[    0.107143] CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+[    0.112648] owl_smp_prepare_cpus(max_cpus:4)
+[    0.117110] Setting up static identity map for 0xc04e4558 - 0xc04e45b0
+[    0.123791] owl_init_cache()
+[    0.126747] L310 cache controller enabled
+[    0.130660] l2x0: 16 ways, CACHE_ID 0x410000c9, AUX_CTRL 0x3e030000, Cache size: 262144 B
+[    0.192900] owl_boot_secondary cpu:1
+[    0.196292] po 1
+[    0.199024] wakeup  1
+[    0.201168] CPU1: Booted secondary processor
+[    0.201173] pr:-1
+[    0.512663] CPU1: thread -1, cpu 1, socket 0, mpidr 80000001
+[    0.532908] owl_boot_secondary cpu:2
+[    0.542016] po 2
+[    0.544730] wakeup  2
+[    0.547044] CPU2: Booted secondary processor
+[    0.547048] pr:-1
+[    0.652690] CPU2: thread -1, cpu 2, socket 0, mpidr 80000002
+[    0.672910] owl_boot_secondary cpu:3
+[    0.682017] po 3
+[    0.684737] wakeup  3
+[    0.687050] CPU3: Booted secondary processor
+[    0.687055] pr:-1
+[    0.792690] CPU3: thread -1, cpu 3, socket 0, mpidr 80000003
+[    0.792812] Brought up 4 CPUs
+[    0.801401] SMP: Total of 4 processors activated (1797.73 BogoMIPS).
+[    0.807824] CPU: All CPU(s) started in SVC mode.
+[    0.813508] devtmpfs: initialized
+[    0.819986] pinctrl core: initialized pinctrl subsystem
+[    0.825477] reg-dummy reg-dummy: no of_node; not parsing pinctrl DT
+[    0.825592] regulator-dummy: no parameters
+[    0.831188] NET: Registered protocol family 16
+[    0.835947]  requeue_bios  init work
+[    0.839334] scan_work  init work
+[    0.845159] DMA: preallocated 256 KiB pool for atomic coherent allocations
+[    0.852564] owl_machine_init()
+[    0.856653] GPIOA initialization
+[    0.860008] GPIOB initialization
+[    0.863464] GPIOC initialization
+[    0.866898] GPIOD initialization
+[    0.873475] hw-breakpoint: found 2 (+1 reserved) breakpoint and 1 watchpoint registers.
+[    0.881284] hw-breakpoint: maximum watchpoint size is 4 bytes.
+[    0.887330] [OWL] pinctrl ats3605 probe
+[    0.891076] [OWL] pinctrl initialization
+[    0.895292] pinctrl-ats3605 b01c0000.pinctrl: nfunctions 37, ngroups 97
+[    0.901832] pinctrl-ats3605 b01c0000.pinctrl: try to register 114 pins ...
+[    0.901866] pinctrl core: registered pin 24 (P_SIRQ0) on b01c0000.pinctrl
+[    0.901876] pinctrl core: registered pin 25 (P_SIRQ1) on b01c0000.pinctrl
+[    0.901885] pinctrl core: registered pin 26 (P_SIRQ2) on b01c0000.pinctrl
+[    0.901894] pinctrl core: registered pin 27 (P_I2S_D0) on b01c0000.pinctrl
+[    0.901903] pinctrl core: registered pin 28 (P_I2S_BCLK0) on b01c0000.pinctrl
+[    0.901912] pinctrl core: registered pin 29 (P_I2S_LRCLK0) on b01c0000.pinctrl
+[    0.901921] pinctrl core: registered pin 30 (P_I2S_MCLK0) on b01c0000.pinctrl
+[    0.901930] pinctrl core: registered pin 31 (P_I2S_D1) on b01c0000.pinctrl
+[    0.901938] pinctrl core: registered pin 32 (P_I2S_BCLK1) on b01c0000.pinctrl
+[    0.901947] pinctrl core: registered pin 33 (P_I2S_LRCLK1) on b01c0000.pinctrl
+[    0.901956] pinctrl core: registered pin 34 (P_I2S_MCLK1) on b01c0000.pinctrl
+[    0.901965] pinctrl core: registered pin 35 (P_KS_IN0) on b01c0000.pinctrl
+[    0.901974] pinctrl core: registered pin 36 (P_KS_IN1) on b01c0000.pinctrl
+[    0.901983] pinctrl core: registered pin 37 (P_KS_IN2) on b01c0000.pinctrl
+[    0.901991] pinctrl core: registered pin 38 (P_KS_IN3) on b01c0000.pinctrl
+[    0.902000] pinctrl core: registered pin 39 (P_KS_OUT0) on b01c0000.pinctrl
+[    0.902009] pinctrl core: registered pin 40 (P_KS_OUT1) on b01c0000.pinctrl
+[    0.902017] pinctrl core: registered pin 41 (P_KS_OUT2) on b01c0000.pinctrl
+[    0.902026] pinctrl core: registered pin 42 (P_LVDS_OEP) on b01c0000.pinctrl
+[    0.902035] pinctrl core: registered pin 43 (P_LVDS_OEN) on b01c0000.pinctrl
+[    0.902044] pinctrl core: registered pin 44 (P_LVDS_ODP) on b01c0000.pinctrl
+[    0.902052] pinctrl core: registered pin 45 (P_LVDS_ODN) on b01c0000.pinctrl
+[    0.902061] pinctrl core: registered pin 46 (P_LVDS_OCP) on b01c0000.pinctrl
+[    0.902070] pinctrl core: registered pin 47 (P_LVDS_OCN) on b01c0000.pinctrl
+[    0.902079] pinctrl core: registered pin 48 (P_LVDS_OBP) on b01c0000.pinctrl
+[    0.902087] pinctrl core: registered pin 49 (P_LVDS_OBN) on b01c0000.pinctrl
+[    0.902096] pinctrl core: registered pin 50 (P_LVDS_OAP) on b01c0000.pinctrl
+[    0.902105] pinctrl core: registered pin 51 (P_LVDS_OAN) on b01c0000.pinctrl
+[    0.902114] pinctrl core: registered pin 52 (P_LVDS_EEP) on b01c0000.pinctrl
+[    0.902122] pinctrl core: registered pin 53 (P_LVDS_EEN) on b01c0000.pinctrl
+[    0.902131] pinctrl core: registered pin 54 (P_LVDS_EDP) on b01c0000.pinctrl
+[    0.902140] pinctrl core: registered pin 55 (P_LVDS_EDN) on b01c0000.pinctrl
+[    0.902149] pinctrl core: registered pin 56 (P_LVDS_ECP) on b01c0000.pinctrl
+[    0.902158] pinctrl core: registered pin 57 (P_LVDS_ECN) on b01c0000.pinctrl
+[    0.902178] pinctrl core: registered pin 58 (P_LVDS_EBP) on b01c0000.pinctrl
+[    0.902187] pinctrl core: registered pin 59 (P_LVDS_EBN) on b01c0000.pinctrl
+[    0.902196] pinctrl core: registered pin 60 (P_LVDS_EAP) on b01c0000.pinctrl
+[    0.902204] pinctrl core: registered pin 61 (P_LVDS_EAN) on b01c0000.pinctrl
+[    0.902213] pinctrl core: registered pin 62 (P_LCD0_D18) on b01c0000.pinctrl
+[    0.902222] pinctrl core: registered pin 63 (P_LCD0_D17) on b01c0000.pinctrl
+[    0.902232] pinctrl core: registered pin 64 (P_LCD0_D16) on b01c0000.pinctrl
+[    0.902240] pinctrl core: registered pin 65 (P_LCD0_D9) on b01c0000.pinctrl
+[    0.902249] pinctrl core: registered pin 66 (P_LCD0_D8) on b01c0000.pinctrl
+[    0.902258] pinctrl core: registered pin 67 (P_LCD0_D2) on b01c0000.pinctrl
+[    0.902267] pinctrl core: registered pin 68 (P_LCD0_D1) on b01c0000.pinctrl
+[    0.902276] pinctrl core: registered pin 69 (P_LCD0_D0) on b01c0000.pinctrl
+[    0.902284] pinctrl core: registered pin 74 (P_SD0_D0) on b01c0000.pinctrl
+[    0.902293] pinctrl core: registered pin 75 (P_SD0_D1) on b01c0000.pinctrl
+[    0.902302] pinctrl core: registered pin 76 (P_SD0_D2) on b01c0000.pinctrl
+[    0.902311] pinctrl core: registered pin 77 (P_SD0_D3) on b01c0000.pinctrl
+[    0.902320] pinctrl core: registered pin 78 (P_SD0_D4) on b01c0000.pinctrl
+[    0.902329] pinctrl core: registered pin 79 (P_SD0_D5) on b01c0000.pinctrl
+[    0.902337] pinctrl core: registered pin 80 (P_SD0_D6) on b01c0000.pinctrl
+[    0.902346] pinctrl core: registered pin 81 (P_SD0_D7) on b01c0000.pinctrl
+[    0.902355] pinctrl core: registered pin 82 (P_SD0_CMD) on b01c0000.pinctrl
+[    0.902363] pinctrl core: registered pin 83 (P_SD0_CLK) on b01c0000.pinctrl
+[    0.902372] pinctrl core: registered pin 84 (P_SD1_CMD) on b01c0000.pinctrl
+[    0.902381] pinctrl core: registered pin 85 (P_SD1_CLK) on b01c0000.pinctrl
+[    0.902390] pinctrl core: registered pin 86 (P_SPI0_SCLK) on b01c0000.pinctrl
+[    0.902399] pinctrl core: registered pin 87 (P_SPI0_SS) on b01c0000.pinctrl
+[    0.902407] pinctrl core: registered pin 88 (P_SPI0_MISO) on b01c0000.pinctrl
+[    0.902416] pinctrl core: registered pin 89 (P_SPI0_MOSI) on b01c0000.pinctrl
+[    0.902425] pinctrl core: registered pin 90 (P_UART0_RX) on b01c0000.pinctrl
+[    0.902434] pinctrl core: registered pin 91 (P_UART0_TX) on b01c0000.pinctrl
+[    0.902443] pinctrl core: registered pin 14 (P_UART2_RX) on b01c0000.pinctrl
+[    0.902451] pinctrl core: registered pin 15 (P_UART2_TX) on b01c0000.pinctrl
+[    0.902460] pinctrl core: registered pin 16 (P_UART2_RTSB) on b01c0000.pinctrl
+[    0.902469] pinctrl core: registered pin 17 (P_UART2_CTSB) on b01c0000.pinctrl
+[    0.902478] pinctrl core: registered pin 18 (P_UART3_RX) on b01c0000.pinctrl
+[    0.902487] pinctrl core: registered pin 19 (P_UART3_TX) on b01c0000.pinctrl
+[    0.902496] pinctrl core: registered pin 20 (P_UART3_RTSB) on b01c0000.pinctrl
+[    0.902505] pinctrl core: registered pin 21 (P_UART3_CTSB) on b01c0000.pinctrl
+[    0.902514] pinctrl core: registered pin 22 (P_UART4_RX) on b01c0000.pinctrl
+[    0.902523] pinctrl core: registered pin 23 (P_UART4_TX) on b01c0000.pinctrl
+[    0.902531] pinctrl core: registered pin 12 (P_I2C0_SCLK) on b01c0000.pinctrl
+[    0.902540] pinctrl core: registered pin 13 (P_I2C0_SDATA) on b01c0000.pinctrl
+[    0.902549] pinctrl core: registered pin 8 (P_I2C1_SCLK) on b01c0000.pinctrl
+[    0.902558] pinctrl core: registered pin 9 (P_I2C1_SDATA) on b01c0000.pinctrl
+[    0.902567] pinctrl core: registered pin 10 (P_I2C2_SCLK) on b01c0000.pinctrl
+[    0.902575] pinctrl core: registered pin 11 (P_I2C2_SDATA) on b01c0000.pinctrl
+[    0.902585] pinctrl core: registered pin 107 (P_SENSOR1_PCLK) on b01c0000.pinctrl
+[    0.902593] pinctrl core: registered pin 96 (P_SENSOR1_VSYNC) on b01c0000.pinctrl
+[    0.902603] pinctrl core: registered pin 97 (P_SENSOR1_HSYNC) on b01c0000.pinctrl
+[    0.902612] pinctrl core: registered pin 98 (P_SENSOR1_DATA0) on b01c0000.pinctrl
+[    0.902621] pinctrl core: registered pin 99 (P_SENSOR1_DATA1) on b01c0000.pinctrl
+[    0.902629] pinctrl core: registered pin 100 (P_SENSOR1_DATA2) on b01c0000.pinctrl
+[    0.902661] pinctrl core: registered pin 101 (P_SENSOR1_DATA3) on b01c0000.pinctrl
+[    0.902672] pinctrl core: registered pin 102 (P_SENSOR1_DATA4) on b01c0000.pinctrl
+[    0.902681] pinctrl core: registered pin 103 (P_SENSOR1_DATA5) on b01c0000.pinctrl
+[    0.902690] pinctrl core: registered pin 104 (P_SENSOR1_DATA6) on b01c0000.pinctrl
+[    0.902699] pinctrl core: registered pin 105 (P_SENSOR1_DATA7) on b01c0000.pinctrl
+[    0.902708] pinctrl core: registered pin 106 (P_SENSOR1_CKOUT) on b01c0000.pinctrl
+[    0.902717] pinctrl core: registered pin 109 (P_NAND_D0) on b01c0000.pinctrl
+[    0.902726] pinctrl core: registered pin 110 (P_NAND_D1) on b01c0000.pinctrl
+[    0.902735] pinctrl core: registered pin 111 (P_NAND_D2) on b01c0000.pinctrl
+[    0.902743] pinctrl core: registered pin 112 (P_NAND_D3) on b01c0000.pinctrl
+[    0.902752] pinctrl core: registered pin 113 (P_NAND_D4) on b01c0000.pinctrl
+[    0.902761] pinctrl core: registered pin 114 (P_NAND_D5) on b01c0000.pinctrl
+[    0.902782] pinctrl core: registered pin 115 (P_NAND_D6) on b01c0000.pinctrl
+[    0.902791] pinctrl core: registered pin 116 (P_NAND_D7) on b01c0000.pinctrl
+[    0.902800] pinctrl core: registered pin 117 (P_NAND_WRB) on b01c0000.pinctrl
+[    0.902809] pinctrl core: registered pin 93 (P_NAND_RDB) on b01c0000.pinctrl
+[    0.902818] pinctrl core: registered pin 92 (P_NAND_DQS) on b01c0000.pinctrl
+[    0.902827] pinctrl core: registered pin 118 (P_NAND_RB) on b01c0000.pinctrl
+[    0.902835] pinctrl core: registered pin 95 (P_NAND_ALE) on b01c0000.pinctrl
+[    0.902844] pinctrl core: registered pin 94 (P_NAND_CLE) on b01c0000.pinctrl
+[    0.902853] pinctrl core: registered pin 70 (P_NAND_CEB0) on b01c0000.pinctrl
+[    0.902862] pinctrl core: registered pin 71 (P_NAND_CEB1) on b01c0000.pinctrl
+[    0.902870] pinctrl core: registered pin 72 (P_NAND_CEB2) on b01c0000.pinctrl
+[    0.902879] pinctrl core: registered pin 73 (P_NAND_CEB3) on b01c0000.pinctrl
+[    0.902888] pinctrl core: registered pin 119 (P_CLKO_25M) on b01c0000.pinctrl
+[    0.902897] pinctrl core: registered pin 120 (P_RESERVED1) on b01c0000.pinctrl
+[    0.902906] pinctrl core: registered pin 121 (P_RESERVED2) on b01c0000.pinctrl
+[    0.902915] pinctrl core: registered pin 122 (P_RESERVED3) on b01c0000.pinctrl
+[    0.902931] pinctrl core: add 0 pinmux maps
+[    0.902947] pinctrl-ats3605 b01c0000.pinctrl: failed to lookup the default state
+[    0.902958] pinctrl-ats3605 b01c0000.pinctrl: failed to lookup the sleep state
+[    0.903306] pwm-owl b01c0000.pwm: owl_pwm_probe
+[    0.907745] pwm-owl b01c0000.pwm: pc->basef81c0000
+[    0.912992] jtag dev init,(619c0,e39e0), panic_time=0
+[    0.917949] ats3605 owl_pm_domain init
+[    0.921917] [OWL] register reset controller
+[    0.932530] bio: create slab <bio-0> at 0
+[    0.937467] owl_pwm_backlight backlight.7: owl_pwm_bl_probe: backlight name is backlight.7
+[    0.945608] __of_parse_pwm_gpio, gpio = -1
+[    0.945618] __of_parse_pwm_gpio, active low = 0
+[    0.945702] pinctrl core: add 1 pinmux maps
+[    0.945732] pinctrl-ats3605 b01c0000.pinctrl: found group selector 11 for mfp1_31_29_ks_in0
+[    0.945750] pinctrl-ats3605 b01c0000.pinctrl: request pin 35 (P_KS_IN0) for owl-pwm0
+[    0.945760] pinmux_request_check_gpio,pin=35
+[    0.949959] [GPIO] owl_gpio_check_dir_by_pinctrl: GPIOB3, is used for input, inen=0x8
+[    0.957950] [OWL] pinctrl: pinmux_request_check_gpio
+[    0.962967] [OWL] pinctrl: error:P_KS_IN0 has already used by 35
+[    0.969028] pinctrl-ats3605 b01c0000.pinctrl: request pin 37 (P_KS_IN2) for owl-pwm0
+[    0.969037] pinmux_request_check_gpio,pin=37
+[    0.973607] pinctrl core: add 1 pinmux maps
+[    0.973634] pinctrl-ats3605 b01c0000.pinctrl: found group selector 12 for mfp1_31_29_ks_in1
+[    0.973650] pinctrl-ats3605 b01c0000.pinctrl: request pin 36 (P_KS_IN1) for owl-pwm1
+[    0.973659] pinmux_request_check_gpio,pin=36
+[    0.977935] [ATS3605 dma] initialize controller
+[    0.982433] dma-owl b0220000.dma-controller: dma-channels 4, dma-requests 16
+[    0.992292] SCSI subsystem initialized
+[    0.995975] [OWL] SPI controller initialization
+[    1.000623] pinctrl core: add 4 pinmux maps
+[    1.000655] pinctrl-ats3605 b01c0000.pinctrl: found group selector 37 for mfp2_2
+[    1.000688] pinctrl-ats3605 b01c0000.pinctrl: found group selector 38 for mfp2_1_0
+[    1.000707] pinctrl-ats3605 b01c0000.pinctrl: found group selector 57 for spi0_dummy
+[    1.000727] pinctrl-ats3605 b01c0000.pinctrl: found group selector 83 for paddrv1_11_10
+[    1.000744] pinctrl-ats3605 b01c0000.pinctrl: request pin 86 (P_SPI0_SCLK) for b0300000.spi
+[    1.000753] pinmux_request_check_gpio,pin=86
+[    1.004948] pinctrl-ats3605 b01c0000.pinctrl: request pin 87 (P_SPI0_SS) for b0300000.spi
+[    1.004958] pinmux_request_check_gpio,pin=87
+[    1.009256] pinctrl-ats3605 b01c0000.pinctrl: request pin 88 (P_SPI0_MISO) for b0300000.spi
+[    1.009264] pinmux_request_check_gpio,pin=88
+[    1.013606] pinctrl-ats3605 b01c0000.pinctrl: request pin 89 (P_SPI0_MOSI) for b0300000.spi
+[    1.013615] pinmux_request_check_gpio,pin=89
+[    1.017982] no RX DMA channel!
+[    1.020949] Failed to work in dma mode, work without dma!
+[    1.026460] spi-owl: probe of b0300000.spi failed with error -22
+[    1.032924] usbcore: registered new interface driver usbfs
+[    1.038353] usbcore: registered new interface driver hub
+[    1.043847] usbcore: registered new device driver usb
+[    1.048872] [OWL] I2C controller initialization
+[    1.053523] pinctrl core: add 1 pinmux maps
+[    1.053555] pinctrl-ats3605 b01c0000.pinctrl: found group selector 45 for mfp3_18_16
+[    1.053572] pinctrl-ats3605 b01c0000.pinctrl: request pin 12 (P_I2C0_SCLK) for b0180000.i2c
+[    1.053582] pinmux_request_check_gpio,pin=12
+[    1.057666] pinctrl-ats3605 b01c0000.pinctrl: request pin 13 (P_I2C0_SDATA) for b0180000.i2c
+[    1.057674] pinmux_request_check_gpio,pin=13
+[    1.062798] i2c-owl b0180000.i2c: I2C adapter ready to operate.
+[    1.068732] pinctrl core: add 1 pinmux maps
+[    1.068764] pinctrl-ats3605 b01c0000.pinctrl: found group selector 50 for mfp3_2_0
+[    1.068783] pinctrl-ats3605 b01c0000.pinctrl: request pin 105 (P_SENSOR1_DATA7) for b0184000.i2c
+[    1.068792] pinmux_request_check_gpio,pin=105
+[    1.072991] pinctrl-ats3605 b01c0000.pinctrl: request pin 104 (P_SENSOR1_DATA6) for b0184000.i2c
+[    1.073000] pinmux_request_check_gpio,pin=104
+[    1.077915] i2c-owl b0184000.i2c: I2C adapter ready to operate.
+[    1.083716] pinctrl core: add 4 pinmux maps
+[    1.083750] pinctrl-ats3605 b01c0000.pinctrl: found group selector 61 for i2c2_dummy
+[    1.083772] pinctrl-ats3605 b01c0000.pinctrl: found group selector 90 for paddrv2_22_21
+[    1.083822] pinctrl-ats3605 b01c0000.pinctrl: request pin 10 (P_I2C2_SCLK) for b0188000.i2c
+[    1.083832] pinmux_request_check_gpio,pin=10
+[    1.088068] pinctrl-ats3605 b01c0000.pinctrl: request pin 11 (P_I2C2_SDATA) for b0188000.i2c
+[    1.088076] pinmux_request_check_gpio,pin=11
+[    1.093002] pinctrl core: add 1 pinmux maps
+[    1.093039] pinctrl-ats3605 b01c0000.pinctrl: found group selector 38 for mfp2_1_0
+[    1.093057] pinctrl-ats3605 b01c0000.pinctrl: request pin 87 (P_SPI0_SS) for 2-0065
+[    1.093066] pinmux_request_check_gpio,pin=87
+[    1.097252] atc260x_i2c 2-0065: Probing...
+[    1.101364] atc260x_i2c 2-0065: atc260x_core_dev_init() enter
+[    1.107322] pinctrl-ats3605 b01c0000.pinctrl: request pin 26 (P_SIRQ2) for ats3605-pinctrl-gpio:26
+[    1.107791] atc260x_i2c 2-0065: set bdg ctl, ret=0 value=0xd2
+[    1.115205] atc260x_i2c 2-0065: detect PMU chip type 1 ver B
+[    1.120674] atc260x_i2c 2-0065: PMU root IRQ 98
+[    1.125951] atc260x_i2c 2-0065: icm_ohm not config, use default value
+[    1.132373] atc260x_i2c 2-0065: auxadc icm_ohm = 20
+[    1.137565] atc260x-regulator atc2603c-dcdc1.1: Probing atc2603c-dcdc1, id=1
+[    1.145713] dcdc1: 700 <--> 1400 mV at 1150 mV 
+[    1.150485] atc260x-regulator atc2603c-dcdc2.2: Probing atc2603c-dcdc2, id=2
+[    1.158775] dcdc2: 1000 <--> 1850 mV at 1600 mV 
+[    1.163736] atc260x-regulator atc2603c-dcdc3.3: Probing atc2603c-dcdc3, id=3
+[    1.171833] dcdc3: 2600 <--> 3100 mV at 3200 mV 
+[    1.176894] atc260x-regulator atc2603c-ldo1.1: Probing atc2603c-ldo1, id=1
+[    1.185972] ldo1: 2600 <--> 3300 mV at 2800 mV 
+[    1.190893] atc260x-regulator atc2603c-ldo2.2: Probing atc2603c-ldo2, id=2
+[    1.199979] ldo2: 2600 <--> 3300 mV at 3100 mV 
+[    1.204846] atc260x-regulator atc2603c-ldo3.3: Probing atc2603c-ldo3, id=3
+[    1.213919] ldo3: 1500 <--> 2000 mV at 1800 mV 
+[    1.218764] atc260x-regulator atc2603c-ldo5.5: Probing atc2603c-ldo5, id=5
+[    1.225825] ldo5: 2600 <--> 3300 mV at 2800 mV 
+[    1.230688] atc260x-regulator atc2603c-ldo6.6: Probing atc2603c-ldo6, id=6
+[    1.239749] ldo6: 700 <--> 1400 mV at 1100 mV 
+[    1.244621] atc260x-regulator atc2603c-ldo7.7: Probing atc2603c-ldo7, id=7
+[    1.253892] ldo7: 1500 <--> 2000 mV at 1800 mV 
+[    1.258776] atc260x-regulator atc2603c-ldo8.8: Probing atc2603c-ldo8, id=8
+[    1.268112] ldo8: 2300 <--> 3300 mV at 3100 mV 
+[    1.272951] atc260x-regulator atc2603c-ldo11.11: Probing atc2603c-ldo11, id=11
+[    1.282260] ldo11: 2600 <--> 3300 mV at 3100 mV 
+[    1.287124] atc260x-switch-ldo atc2603c-switch1.1: Probing atc2603c-switch1, id=1
+[    1.294441] atc260x-switch-ldo atc2603c-switch1.1: pmic_ver=1
+[    1.300548] [SWITCH1] set switch 1 to ldo mode Version D!
+[    1.306197] switch1: 3000 <--> 3300 mV at 3100 mV 
+[    1.311808] atc260x-gpio atc2603c-gpio.0: Probing...
+[    1.316930] atc2603c-sgpio atc2603c-sgpio.0: Probing...
+[    1.322548] atc2603c-sgpio atc2603c-sgpio.0: new IRQ mapping: hwirq0 -> virq195
+[    1.329688] atc2603c-sgpio atc2603c-sgpio.0: new IRQ mapping: hwirq1 -> virq196
+[    1.337219] atc2603c-sgpio atc2603c-sgpio.0: new IRQ mapping: hwirq2 -> virq197
+[    1.344586] atc2603c-sgpio atc2603c-sgpio.0: new IRQ mapping: hwirq3 -> virq198
+[    1.351939] atc2603c-sgpio atc2603c-sgpio.0: new IRQ mapping: hwirq4 -> virq199
+[    1.359319] atc2603c-sgpio atc2603c-sgpio.0: new IRQ mapping: hwirq5 -> virq200
+[    1.366685] atc2603c-sgpio atc2603c-sgpio.0: new IRQ mapping: hwirq6 -> virq201
+[    1.374047] atc2603c-sgpio atc2603c-sgpio.0: root virq num : 194
+[    1.381478] atc260x-pm atc2603c-pm.0: Probing...
+[    1.385940] atc260x-pm atc2603c-pm.0: _atc260x_pm_set_wakeup_src_inner() enter, mask=0x7fff src=0x706
+[    1.395744] atc260x-pm atc2603c-pm.0: _atc260x_pm_set_wakeup_src_inner() setup reg=0x0 msk=0xffe0 val=0xe0c0 readback=0xe0cb
+[    1.407256] atc260x-pm atc2603c-pm.0: _atc260x_pm_set_wakeup_src_inner() setup reg=0x3 msk=0xc val=0x0 readback=0x4080
+[    1.418244] atc260x-pm atc2603c-pm.0: _atc260x_pm_set_wakeup_src_inner() enter, mask=0x8 src=0x0
+[    1.427155] atc260x-pm atc2603c-pm.0: _atc260x_pm_set_wakeup_src_inner() setup reg=0x0 msk=0x100 val=0x0 readback=0xe0cb
+[    1.438593] atc260x-pm atc2603c-pm.0: _clear_status() no need to restore old alarm
+[    1.446897] atc260x-pm atc2603c-pm.0: got support_adaptor_type: 3
+[    1.453419] atc260x-pm atc2603c-pm.0: translated wakeup falgs: 0x600
+[    1.459749] [PM] set pmic suspend ops 0xc0709e58
+[    1.464436] atc260x-pm atc2603c-pm.0: #####atc260x_pm_probe PMU_SYS_CTL0:0xe0cb ####
+[    1.472070] atc260x_i2c 2-0065: atc260x_core_dev_init() exit
+[    1.477804] i2c-owl b0188000.i2c: I2C adapter ready to operate.
+[    1.483970] Linux video capture interface: v2.00
+[    1.488664] owl_ion_init
+[    1.491192] owl_ion_probe
+[    1.494123] [OWL] ion_heap_fb: base 0x0, size 0x0
+[    1.498722] [OWL] ion_heap_reserved: base 0x0, size 0x0
+[    1.541473] Advanced Linux Sound Architecture Driver Initialized.
+[    1.548351] cfg80211: Calling CRDA to update world regulatory domain
+[    1.555621] Switching to clocksource timer0
+[    1.569255] NET: Registered protocol family 2
+[    1.574155] TCP established hash table entries: 2048 (order: 2, 16384 bytes)
+[    1.581267] TCP bind hash table entries: 2048 (order: 2, 16384 bytes)
+[    1.587555] TCP: Hash tables configured (established 2048 bind 2048)
+[    1.594099] TCP: reno registered
+[    1.597315] UDP hash table entries: 256 (order: 1, 8192 bytes)
+[    1.603249] UDP-Lite hash table entries: 256 (order: 1, 8192 bytes)
+[    1.609963] NET: Registered protocol family 1
+[    1.614565] Unpacking initramfs...
+[    1.717065] Freeing initrd memory: 1376K (c1100000 - c1258000)
+[    1.724098] alarmtimer alarmtimer: no of_node; not parsing pinctrl DT
+[    1.732981] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    1.739081] exFAT: Version 1.2.9
+[    1.742402] msgmni has been set to 423
+[    1.747804] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 252)
+[    1.755212] io scheduler noop registered
+[    1.759194] io scheduler cfq registered (default)
+[    1.764078] owl_dss_core: owl_dss_init, start
+[    1.768244] owl_ctrl: owl_ctrl_init, start
+[    1.772421] owl_panel: owl_panel_init, start
+[    1.776848] owl_de3605: owl_de_ats3605_init, owl_de_ats3605_init
+[    1.783218] de-ats3605 b02f0000.de: de_ats3605_probe, pdev = 0xce136600
+[    1.789794] owl_de: owl_de_register, start
+[    1.795881] de-ats3605 b02f0000.de: de_ats3605_device_power_on
+[    1.801738] owl_de: owl_de_debugfs_create, start
+[    1.806810] owl_lcdc: owl_lcdc_init, owl_lcdc_init
+[    1.811692] pinctrl core: add 9 pinmux maps
+[    1.811728] pinctrl-ats3605 b01c0000.pinctrl: found group selector 0 for mfp0_31_29
+[    1.811743] pinctrl-ats3605 b01c0000.pinctrl: found group selector 1 for mfp0_28_26
+[    1.811758] pinctrl-ats3605 b01c0000.pinctrl: found group selector 2 for mfp0_25_23
+[    1.811773] pinctrl-ats3605 b01c0000.pinctrl: found group selector 3 for mfp0_22_20_sirq0
+[    1.811789] pinctrl-ats3605 b01c0000.pinctrl: found group selector 6 for mfp0_19_17
+[    1.811804] pinctrl-ats3605 b01c0000.pinctrl: found group selector 7 for mfp0_16_14
+[    1.811821] pinctrl-ats3605 b01c0000.pinctrl: found group selector 17 for mfp1_22
+[    1.811837] pinctrl-ats3605 b01c0000.pinctrl: found group selector 18 for mfp1_21
+[    1.811854] pinctrl-ats3605 b01c0000.pinctrl: found group selector 24 for mfp1_9
+[    1.811872] pinctrl-ats3605 b01c0000.pinctrl: request pin 42 (P_LVDS_OEP) for b02a0000.lcd
+[    1.811882] pinmux_request_check_gpio,pin=42
+[    1.816053] pinctrl-ats3605 b01c0000.pinctrl: request pin 43 (P_LVDS_OEN) for b02a0000.lcd
+[    1.816061] pinmux_request_check_gpio,pin=43
+[    1.820411] pinctrl-ats3605 b01c0000.pinctrl: request pin 44 (P_LVDS_ODP) for b02a0000.lcd
+[    1.820421] pinmux_request_check_gpio,pin=44
+[    1.824720] pinctrl-ats3605 b01c0000.pinctrl: request pin 45 (P_LVDS_ODN) for b02a0000.lcd
+[    1.824728] pinmux_request_check_gpio,pin=45
+[    1.829052] pinctrl-ats3605 b01c0000.pinctrl: request pin 46 (P_LVDS_OCP) for b02a0000.lcd
+[    1.829061] pinmux_request_check_gpio,pin=46
+[    1.833404] pinctrl-ats3605 b01c0000.pinctrl: request pin 49 (P_LVDS_OBN) for b02a0000.lcd
+[    1.833414] pinmux_request_check_gpio,pin=49
+[    1.837719] pinctrl-ats3605 b01c0000.pinctrl: request pin 50 (P_LVDS_OAP) for b02a0000.lcd
+[    1.837727] pinmux_request_check_gpio,pin=50
+[    1.842068] pinctrl-ats3605 b01c0000.pinctrl: request pin 51 (P_LVDS_OAN) for b02a0000.lcd
+[    1.842077] pinmux_request_check_gpio,pin=51
+[    1.846386] pinctrl-ats3605 b01c0000.pinctrl: request pin 42 (P_LVDS_OEP) for b02a0000.lcd
+[    1.846400] pinctrl-ats3605 b01c0000.pinctrl: request pin 43 (P_LVDS_OEN) for b02a0000.lcd
+[    1.846413] pinctrl-ats3605 b01c0000.pinctrl: request pin 44 (P_LVDS_ODP) for b02a0000.lcd
+[    1.846426] pinctrl-ats3605 b01c0000.pinctrl: request pin 45 (P_LVDS_ODN) for b02a0000.lcd
+[    1.846439] pinctrl-ats3605 b01c0000.pinctrl: request pin 46 (P_LVDS_OCP) for b02a0000.lcd
+[    1.846452] pinctrl-ats3605 b01c0000.pinctrl: request pin 47 (P_LVDS_OCN) for b02a0000.lcd
+[    1.846460] pinmux_request_check_gpio,pin=47
+[    1.850735] pinctrl-ats3605 b01c0000.pinctrl: request pin 48 (P_LVDS_OBP) for b02a0000.lcd
+[    1.850745] pinmux_request_check_gpio,pin=48
+[    1.855051] pinctrl-ats3605 b01c0000.pinctrl: request pin 49 (P_LVDS_OBN) for b02a0000.lcd
+[    1.855065] pinctrl-ats3605 b01c0000.pinctrl: request pin 50 (P_LVDS_OAP) for b02a0000.lcd
+[    1.855078] pinctrl-ats3605 b01c0000.pinctrl: request pin 51 (P_LVDS_OAN) for b02a0000.lcd
+[    1.855093] pinctrl-ats3605 b01c0000.pinctrl: request pin 52 (P_LVDS_EEP) for b02a0000.lcd
+[    1.855101] pinmux_request_check_gpio,pin=52
+[    1.859384] pinctrl-ats3605 b01c0000.pinctrl: request pin 53 (P_LVDS_EEN) for b02a0000.lcd
+[    1.859393] pinmux_request_check_gpio,pin=53
+[    1.863732] pinctrl-ats3605 b01c0000.pinctrl: request pin 54 (P_LVDS_EDP) for b02a0000.lcd
+[    1.863742] pinmux_request_check_gpio,pin=54
+[    1.868051] pinctrl-ats3605 b01c0000.pinctrl: request pin 55 (P_LVDS_EDN) for b02a0000.lcd
+[    1.868059] pinmux_request_check_gpio,pin=55
+[    1.872398] pinctrl-ats3605 b01c0000.pinctrl: request pin 56 (P_LVDS_ECP) for b02a0000.lcd
+[    1.872408] pinmux_request_check_gpio,pin=56
+[    1.876718] pinctrl-ats3605 b01c0000.pinctrl: request pin 57 (P_LVDS_ECN) for b02a0000.lcd
+[    1.876726] pinmux_request_check_gpio,pin=57
+[    1.881065] pinctrl-ats3605 b01c0000.pinctrl: request pin 58 (P_LVDS_EBP) for b02a0000.lcd
+[    1.881074] pinmux_request_check_gpio,pin=58
+[    1.885384] pinctrl-ats3605 b01c0000.pinctrl: request pin 59 (P_LVDS_EBN) for b02a0000.lcd
+[    1.885393] pinmux_request_check_gpio,pin=59
+[    1.889718] pinctrl-ats3605 b01c0000.pinctrl: request pin 60 (P_LVDS_EAP) for b02a0000.lcd
+[    1.889726] pinmux_request_check_gpio,pin=60
+[    1.894064] pinctrl-ats3605 b01c0000.pinctrl: request pin 61 (P_LVDS_EAN) for b02a0000.lcd
+[    1.894074] pinmux_request_check_gpio,pin=61
+[    1.898386] pinctrl-ats3605 b01c0000.pinctrl: request pin 62 (P_LCD0_D18) for b02a0000.lcd
+[    1.898395] pinmux_request_check_gpio,pin=62
+[    1.902732] pinctrl-ats3605 b01c0000.pinctrl: request pin 67 (P_LCD0_D2) for b02a0000.lcd
+[    1.902742] pinmux_request_check_gpio,pin=67
+[    1.907073] owl-lcdc b02a0000.lcd: owl_lcdc_probe, pdev = 0xce136800
+[    1.913478] owl_ctrl: owl_ctrl_register, start
+[    1.919081] owl-lcdc b02a0000.lcd: lcdc_is_enabled, 1
+[    1.924047] owl-lcdc b02a0000.lcd: owl_lcdc_probe, OK
+[    1.929295] owl_ip-sx00: ip_sx00_platform_init, ip_sx00_platform_init
+[    1.935697] hdmi-ip-sx00 b02c0000.hdmi: ip_sx00_probe
+[    1.940800] owl_hdmi core: hdmi_ip_register, hdmi_ip_register
+[    1.946874] hdmi en statue 0x0
+[    1.949934] owl_ctrl: owl_ctrl_register, start
+[    1.956525] hdmi_ddc: hdmi_iic_probe, OK
+[    1.960805] panel_glp_init
+[    1.963536] panel-glp panel.0: panel_glp_probe
+[    1.968015] panel_parse_info
+[    1.971014] pinctrl-ats3605 b01c0000.pinctrl: request pin 38 (P_KS_IN3) for ats3605-pinctrl-gpio:38
+[    1.971038] panel-glp panel.0: request reset_gpio failed: -16
+[    1.976676] owl_panel: owl_panel_parse_panel_info, start
+[    1.982074] owl_panel: owl_panel_parse_panel_info, is_primary 1, need_edid 1
+[    1.982085] owl_panel: owl_panel_parse_panel_info, 197mm x 147mm, bpp 24
+[    1.982094] owl_panel: owl_panel_parse_panel_info, power_on_delay 0, power_off_delay 0
+[    1.982102] owl_panel: owl_panel_parse_panel_info, enable_delay 0, disable_delay 0
+[    1.982112] owl_panel: owl_panel_parse_panel_info, draw size 480x816
+[    1.982124] owl_panel: owl_panel_parse_panel_info, brightness 0, max_brightness 0, min_brightness 0
+[    1.982151] owl_panel: owl_panel_parse_panel_info, 480 x 816, refresh 60
+[    1.982159] owl_panel: owl_panel_parse_panel_info, pixclock 31250
+[    1.982171] owl_panel: owl_panel_parse_panel_info, hfp 6, hbp 19, vfp 12, vbp 29, hsw 1, vsw 1
+[    1.982180] owl_panel: panel_update_timing_info, preline time(205us) is abnormal
+[    1.989501] owl_panel: owl_panel_register, start
+[    1.994283] owl_ctrl: owl_ctrl_add_panel, start
+[    1.998875] panel_ghp_init
+[    2.001681] panel-ghp panel.1: panel_ghp_probe
+[    2.006146] owl_panel: owl_panel_parse_panel_info, start
+[    2.011641] no blk dev
+[    2.013816] read MiscInfoHeader failed
+[    2.017722] read Head failed
+[    2.020798] owl_panel: owl_panel_parse_panel_info, is_primary 0, need_edid 1
+[    2.020809] owl_panel: owl_panel_parse_panel_info, 0mm x 0mm, bpp 0
+[    2.020817] owl_panel: owl_panel_parse_panel_info, power_on_delay 0, power_off_delay 0
+[    2.020826] owl_panel: owl_panel_parse_panel_info, enable_delay 0, disable_delay 0
+[    2.020836] owl_panel: owl_panel_parse_panel_info, draw size 480x816
+[    2.020846] owl_panel: owl_panel_parse_panel_info, brightness 0, max_brightness 0, min_brightness 0
+[    2.020882] owl_panel: owl_panel_parse_panel_info, 1280 x 720, refresh 60
+[    2.020890] owl_panel: owl_panel_parse_panel_info, pixclock 0
+[    2.020901] owl_panel: owl_panel_parse_panel_info, hfp 0, hbp 0, vfp 0, vbp 0, hsw 0, vsw 0
+[    2.020909] owl_panel: panel_update_timing_info, preline time(0us) is abnormal
+[    2.027933] owl_panel: owl_panel_register, start
+[    2.032663] hdmi_hdcp: hdcp_read_key, failed to read hdcp key from secure storage(-11)
+[    2.040026] owl_ctrl: owl_ctrl_add_panel, start
+[    2.040037] owl_de: owl_de_path_update_panel, hdmi is path 0 default current panel
+[    2.040044] owl_panel: panel_update_timing_info, preline time(133us) is abnormal
+[    2.040048] 1st reg hdmi reopen work .cable_check_dwork ...
+[    2.040068] owl_de: owl_de_path_update_panel, hdmi is path 0 default current panel
+[    2.040195] owl_fbmain: owl_fb_init, owl_fb_init
+[    2.040359] owl-fb framebuffer.9: owl_fb_probe
+[    2.040371] owl-fb framebuffer.9: owl_fb_probe: panel 'hdmi'
+[    2.040378] owl-fb framebuffer.9: owl_fb_probe: panel 'lcd'
+[    2.040387] owl-fb framebuffer.9: owl_fb_init_ofbi: id 0
+[    2.040395] owl-fb framebuffer.9: owl_fb_init_ofbi: enable
+[    2.040402] owl_panel: owl_panel_enable, state 1, power_on_delay 0, enable_delay 0
+[    2.040407] ###DE fifo underflow 0x10
+[    2.040416] owl_panel: owl_panel_get_draw_size, x3 display width -838345128 , height -838345124
+[    2.040423] owl-fb framebuffer.9: owl_fb_init_ofbi:-------------------------to fb_set_var()
+[    2.040427] (NULL device *): owl_fb_check_var
+[    2.040432] fb_set_var()-1008,info->fbops->fb_set_par = c01f3fb4 
+[    2.040442] owl-fb framebuffer.9: owl_fb_set_par: resolution, 480x816 (480x2448 virtual)
+[    2.040448] owl-fb framebuffer.9: owl_fb_set_par: ofbi ce15de6c
+[    2.040455] owl-fb framebuffer.9: owl_fb_set_par: &ofbi->pdev->dev ce146010
+[    2.040461] owl-fb framebuffer.9: __ofbi_alloc_fbmem
+[    2.040467] owl-fb framebuffer.9: __ofbi_alloc_fbmem: ofbi->panel->desc.type =(0x1)
+[    2.109014] owl-fb framebuffer.9: __ofbi_alloc_fbmem: paddr = e840000, vaddr = ce840000
+[    2.109034] (NULL device *): old owl_fb_pan_display: offset, 0x0
+[    2.109049] owl-fb framebuffer.9: owl_fb_init_ofbi: register_framebuffer
+[    2.109342] owl-fb framebuffer.9: owl_fb_probe: panel 'hdmi'
+[    2.109356] owl-fb framebuffer.9: owl_fb_init_ofbi: id 1
+[    2.109369] owl-fb framebuffer.9: owl_fb_init_ofbi: enable
+[    2.109379] owl_panel: owl_panel_enable, state 2, power_on_delay 0, enable_delay 0
+[    2.116864] owl_ctrl: owl_ctrl_power_on, controller power_on ... ...
+[    2.123262] owl_ctrl: owl_ctrl_enable, controller enable start
+[    2.129147] hdmi-ip-sx00 b02c0000.hdmi: owl_hdmic_enable
+[    2.149089] ###DE fifo underflow 0x4
+[    2.149104] owl-fb framebuffer.9: ofbi_init_var
+[    2.149115] owl_panel: owl_panel_get_draw_size, x3 display width -838345128 , height -838345124
+[    2.149126] owl-fb framebuffer.9: owl_fb_init_ofbi:-------------------------to fb_set_var()
+[    2.157465] (NULL device *): owl_fb_check_var
+[    2.157476] fb_set_var()-1008,info->fbops->fb_set_par = c01f3fb4 
+[    2.163535] owl-fb framebuffer.9: owl_fb_set_par: resolution, 480x816 (480x2448 virtual)
+[    2.163548] owl-fb framebuffer.9: owl_fb_set_par: ofbi ce15e26c
+[    2.163559] owl-fb framebuffer.9: owl_fb_set_par: &ofbi->pdev->dev ce146010
+[    2.163569] owl-fb framebuffer.9: __ofbi_alloc_fbmem
+[    2.163580] owl-fb framebuffer.9: __ofbi_alloc_fbmem: ofbi->panel->desc.type =(0x20)
+[    2.168129] owl-fb framebuffer.9: __ofbi_alloc_fbmem: paddr = ea80000, vaddr = cea80000
+[    2.168150] (NULL device *): old owl_fb_pan_display: offset, 0x0
+[    2.168164] owl-fb framebuffer.9: owl_fb_init_ofbi: register_framebuffer
+[    2.168424] owl-fb framebuffer.9: owl_fb_probe: panel 'lcd'
+[    2.168677] vce_drv_init ....
+[    2.171724]  -- vce-prob start ----------------------------
+[    2.177191] vce_drv: ic_type(0x5207)!
+[    2.181017] vce_drv: aft powergate ...
+[    2.184735] vce_drv: aft reset_get ...
+[    2.188547] vce_drv: aft clk_get ...
+[    2.192110] vce_drv: vce->irq =79
+[    2.195497] vce_drv: aft irq_request ...
+[    2.199690] vce_drv: vol_set:ce1bc740
+[    2.203378] vce_drv:  -- init vdd2:1100000
+[    2.207808] vce_drv: init vdd:1100000
+[    2.211474] vce_drv: vdd regulator enable!
+[    2.215440]  ---  test -----!
+[    2.218567] vce_drv: vce_probe!start = b0278000,size = 148!
+[    2.224211] vce_drv: vce_probe!iobase_vce = f8278000!
+[    2.229317] vce_drv: vce_probe!iobase_cmu_devclken0 = f81500a0!
+[    2.235217] vce_drv: vce_probe!iobase_sps_pg_ctl = d2808000!
+[    2.241320]  -- vde-prob start ----------------------------
+[    2.246787] vde_drv: ic_type(0x5207)!
+[    2.250621] vde_drv: aft powergate ...
+[    2.254332] vde_drv: aft reset_get ...
+[    2.258143] vde_drv: aft clk_get ...
+[    2.261709] vde_drv: vde->irq =80
+[    2.265090] vde_drv: aft irq_request ...
+[    2.269281] vde_drv: vol_set:cd912d00
+[    2.272978] vde_drv:  vde not change the vdd.used the system regs.
+[    2.279030] vde_drv: vde_probe!start = b0270000,size = 236!
+[    2.284762] vde_drv: vde_probe!iobase_vde = f8270000!
+[    2.289874] vde_drv: vde_probe!iobase_cmu_devclken0 = f81500a0!
+[    2.295753] vde_drv: vde_probe!iobase_sps_pg_ctl = f81c0100!
+[    2.301486] vde_probe OK
+[    2.304187] vde_init OK
+[    2.307073] pinctrl core: add 2 pinmux maps
+[    2.307112] pinctrl-ats3605 b01c0000.pinctrl: found group selector 40 for mfp3_30_28
+[    2.307130] pinctrl-ats3605 b01c0000.pinctrl: found group selector 44 for mfp3_21_19
+[    2.307147] pinctrl-ats3605 b01c0000.pinctrl: request pin 90 (P_UART0_RX) for b0160000.uart
+[    2.307157] pinmux_request_check_gpio,pin=90
+[    2.311444] pinctrl-ats3605 b01c0000.pinctrl: request pin 91 (P_UART0_TX) for b0160000.uart
+[    2.311454] pinmux_request_check_gpio,pin=91
+[    2.315684] serial-owl b0160000.uart: detected port 0
+[    2.320843] b0160000.uart: ttyS0 at MMIO 0xb0160000 (irq = 60) is a serial-owl
+[    2.328229] failed to get rx_disable_flag, set default:0
+[    2.333511] serial-owl b0164000.uart: detected port 2
+[    2.338684] b0164000.uart: ttyS2 at MMIO 0xb0164000 (irq = 62) is a serial-owl
+[    2.346089] failed to get rx_disable_flag, set default:0
+[    2.351365] serial-owl b016a000.uart: detected port 5
+[    2.356540] b016a000.uart: ttyS5 at MMIO 0xb016a000 (irq = 65) is a serial-owl
+[    2.356636] console [ttyS5] enabled, bootconsole disabled
+[    2.362535] [OWL] serial driver initialized
+[    2.370837] loop: module loaded
+[    2.373985] misc_info_init, line 1295, Aug 22 2023 14:52:28
+[    2.379686] mi_debug_init, line 376
+[    2.383490] leopard_request_dma_sync_addr,i:0
+[    2.393644] aotg_hcd_get_dts hcd_ports_en_ctrl: 0
+[    2.398345] aotg_hcd_get_dts couldn't find hcd_suspend_en!
+[    2.403852] aotg_hcd_get_dts couldn't find aotg0_host_plug_detect!
+[    2.410040] aotg_hcd_get_dts aotg1_host_plug_detect: 1
+[    2.415250] aotg0_device_mod_init couldn't find power_en_gpio!
+[    2.421088] aotg0_device_mod_init couldn't find wifi_power_en_gpio!
+[    2.427345] aotg0_device_mod_init couldn't find wifi_gpio!
+[    2.432910] aotg1_device_mod_init couldn't find power_en_gpio!
+[    2.438732] aotg1_device_mod_init couldn't find wifi_power_en_gpio!
+[    2.445005] aotg1_device_mod_init couldn't find wifi_gpio!
+[    2.450517] aotg_uhost_mon_init, port0_plug_en: 0, port1_plug_en: 1
+[    2.458510] usb_monitor usb_monitor: no of_node; not parsing pinctrl DT
+[    2.458664] No adaptor_type!
+[    2.461615] pinctrl-ats3605 b01c0000.pinctrl: request pin 35 (P_KS_IN0) for ats3605-pinctrl-gpio:35
+[    2.461626] [OWL] pinctrl: gpio_request_check_pinmux
+[    2.466582] [OWL] pinctrl: error:P_KS_IN0 has already been requested by owl-pwm0
+[    2.473982] idpin_gpio: 35
+[    2.476692] <MON monitor_probe:443> umonitor probe--------------------------- 
+[    2.483921] <MON usb_hal_init_monitor_hw_ops:114>pdev->io_base is f8240000
+[    2.490881] <MON monitor_probe:467>0/home/sjg/work/game_gy/openwrt/kernel/drivers/usb/legacy/monitor/umonitor_api.c--467, initalize a wake_lock
+[    2.503938] <MON mon_thread_port:135>entring mon_thread_port
+[    2.504143] usbcore: registered new interface driver usb-storage
+[    2.504414] atc260x-onoff atc2603c-onoff.0: Probing atc2603c-onoff
+[    2.504425] atc260x-onoff atc2603c-onoff.0: atc260x_onoff IRQ num : 192
+[    2.504432] gpio:hard_onoff_key not config
+[    2.504631] input: atc260x_onoff as /devices/b0188000.i2c/i2c-2/2-0065/atc2603c-onoff.0/input/input0
+[    2.505912] atc260x-rtc atc2603c-rtc.0: Probing...
+[    2.508790] atc260x-rtc atc2603c-rtc.0: rtc core: registered atc260x-RTC as rtc0
+[    2.509112] atc260x-rtc atc2603c-rtc.0: RTC alarm IRQ num : 193
+[    2.509605] atc260x_charger: version(r2p7), time stamp(20151126133607)
+[    2.510330] create sysfs for atc260x charger
+[    2.510407] [atc260x_charger_cfg_init] change_current_temp not found, 1 default
+[    2.510412] [atc260x_charger_cfg_init] cur_rise_enable not found, 0 default
+[    2.510416] [atc260x_charger_cfg_init] ot_shutoff_enable not found, 1 default
+[    2.510424] atc260x_charger_cfg_init wall swicth gpio not exist!
+[    2.513451] atc260x_charger_init_base 961 enable vbus current
+[    2.514041] atc260x-charger atc2603c-charger.0: atc260x_charter_otint IRQ num : 204
+[    2.514852] ATC260X_OCV_GAUGE: atc2603c_battery(ocv):version(r5p3), time stamp(20181218)
+[    2.515048] t:23315, (0x1044033e,0x49a0c548)
+[    2.515099] ATC260X_OCV_GAUGE: [atc260x_gauge_probe] ocv gauge
+[    2.515863] ATC260X_OCV_GAUGE: [gauge_create_sysfs] create sysfs for gauge
+[    2.515947] ATC260X_OCV_GAUGE: cfg_items.ch_resistor =220
+[    2.515951] ATC260X_OCV_GAUGE: cfg_items.disch_resistor =260
+[    2.516218] ATC260X_OCV_GAUGE: init_gauge:
+[    2.516248] owl_wdt b0020600.twd-watchdog: probe...
+[    2.516257] owl_wdt_probe: irq=30
+[    2.516322] owl_wdt b0020600.twd-watchdog: watchdog hard mode
+[    2.516903] cpuidle: using governor ladder
+[    2.516908] cpuidle: using governor menu
+[    2.517094] pinctrl core: add 11 pinmux maps
+[    2.517130] pinctrl-ats3605 b01c0000.pinctrl: found group selector 47 for mfp3_11_9
+[    2.517143] pinctrl-ats3605 b01c0000.pinctrl: found group selector 48 for mfp3_8_6
+[    2.517157] pinctrl-ats3605 b01c0000.pinctrl: found group selector 49 for mfp3_5_3
+[    2.517169] pinctrl-ats3605 b01c0000.pinctrl: found group selector 56 for sd1_dummy
+[    2.517181] pinctrl-ats3605 b01c0000.pinctrl: found group selector 34 for mfp2_10_9
+[    2.517191] pinctrl-ats3605 b01c0000.pinctrl: invalid group "mfp2_4_3" for function "sd1"
+[    2.517312] [OWL] initialize actions,ats3605-mmc controller devid:3
+[    2.517370] owl mmc use clock source: DEVPLL
+[    2.517691] No "wifi,bt,power,ctl" node found in dts
+[    2.517697] leopard_request_dma_sync_addr,i:1
+[    2.517959] pinctrl core: add 13 pinmux maps
+[    2.517995] pinctrl core: add 7 pinmux maps
+[    2.518023] pinctrl-ats3605 b01c0000.pinctrl: found group selector 31 for mfp2_19_17
+[    2.518035] pinctrl-ats3605 b01c0000.pinctrl: found group selector 32 for mfp2_16_14
+[    2.518047] pinctrl-ats3605 b01c0000.pinctrl: found group selector 33 for mfp2_13_11
+[    2.518059] pinctrl-ats3605 b01c0000.pinctrl: found group selector 35 for mfp2_8_7
+[    2.518071] pinctrl-ats3605 b01c0000.pinctrl: found group selector 36 for mfp2_6_5
+[    2.518125] pinctrl-ats3605 b01c0000.pinctrl: found group selector 77 for paddrv1_23_22
+[    2.518138] pinctrl-ats3605 b01c0000.pinctrl: found group selector 79 for paddrv1_19_18
+[    2.518151] pinctrl-ats3605 b01c0000.pinctrl: found group selector 80 for paddrv1_17_16
+[    2.518163] pinctrl-ats3605 b01c0000.pinctrl: found group selector 35 for mfp2_8_7
+[    2.518175] pinctrl-ats3605 b01c0000.pinctrl: found group selector 36 for mfp2_6_5
+[    2.518197] pinctrl-ats3605 b01c0000.pinctrl: found group selector 79 for paddrv1_19_18
+[    2.518209] pinctrl-ats3605 b01c0000.pinctrl: found group selector 80 for paddrv1_17_16
+[    2.518221] pinctrl-ats3605 b01c0000.pinctrl: found group selector 31 for mfp2_19_17
+[    2.518233] pinctrl-ats3605 b01c0000.pinctrl: found group selector 32 for mfp2_16_14
+[    2.518304] [OWL] initialize actions,ats3605-mmc controller devid:3
+[    2.518351] owl mmc use clock source: DEVPLL
+[    2.518612] SDC0 use sdio uart conversion
+[    2.518619] cfg SDC0 maxclk=30000000
+[    2.518649] use COMMAND to detect SD/MMC card
+[    2.518653] leopard_request_dma_sync_addr,i:2
+[    2.519445] pinctrl-ats3605 b01c0000.pinctrl: request pin 40 (P_KS_OUT1) for ats3605-pinctrl-gpio:40
+[    2.519472] pinctrl-ats3605 b01c0000.pinctrl: request pin 21 (P_UART3_CTSB) for ats3605-pinctrl-gpio:21
+[    2.519644] hidraw: raw HID events driver (C) Jiri Kosina
+[    2.527908] usbcore: registered new interface driver usbhid
+[    2.527912] usbhid: USB HID core driver
+[    2.528451] ashmem: initialized
+[    2.528749] usbcore: registered new interface driver snd-usb-audio
+[    2.528993] snd-soc-dummy snd-soc-dummy: no of_node; not parsing pinctrl DT
+[    2.529125] atc2603c_init
+[    2.529224] fail get snd record source
+[    2.529441] pinctrl core: add 3 pinmux maps
+[    2.529467] pinctrl-ats3605 b01c0000.pinctrl: found group selector 8 for mfp0_5
+[    2.529479] pinctrl-ats3605 b01c0000.pinctrl: found group selector 9 for mfp0_2_i2s0
+[    2.529495] pinctrl-ats3605 b01c0000.pinctrl: found group selector 54 for i2s0_dummy
+[    2.529508] pinctrl-ats3605 b01c0000.pinctrl: request pin 29 (P_I2S_LRCLK0) for atc2603c-audio.0
+[    2.529513] pinmux_request_check_gpio,pin=29
+[    2.529524] pinctrl-ats3605 b01c0000.pinctrl: request pin 30 (P_I2S_MCLK0) for atc2603c-audio.0
+[    2.529527] pinmux_request_check_gpio,pin=30
+[    2.529539] pinctrl-ats3605 b01c0000.pinctrl: request pin 29 (P_I2S_LRCLK0) for atc2603c-audio.0
+[    2.529548] pinctrl-ats3605 b01c0000.pinctrl: request pin 27 (P_I2S_D0) for atc2603c-audio.0
+[    2.529552] pinmux_request_check_gpio,pin=27
+[    2.529572] atc2603c_platform_probe
+[    2.529645] atc2603c_init ok!
+[    2.529788] audio: IC type is 3605!
+[    2.529807] it's ok to get resource of owl-audio-i2s !
+[    2.529921] owl_of_dma_simple_xlate 1
+[    2.529936] owl_of_dma_simple_xlate 1
+[    2.529948] owl-audio-i2s b0100000.owl-audio-i2s: s900_dai_probe
+[    2.530313] audio: IC type is ats3605!
+[    2.530320] it's ok to get resource of owl-audio-hdmi !
+[    2.530363] owl_of_dma_simple_xlate 1
+[    2.530377] owl-audio-hdmi b0100000.owl-audio-hdmi: s900_hdmi_dai_probe
+[    2.530497] s900_pcm_init
+[    2.530707] s900-pcm-audio s900-pcm-audio: no of_node; not parsing pinctrl DT
+[    2.530735] s900-pcm-audio s900-pcm-audio: s900_pcm_probe!!
+[    2.530843] s900_link_init
+[    2.530914] pinctrl-ats3605 b01c0000.pinctrl: request pin 72 (P_NAND_CEB2) for ats3605-pinctrl-gpio:72
+[    2.530925] [SNDRV]:[s900_audio_gpio_init] find speaker_mode_gpios property fail
+[    2.530925] 
+[    2.530946] pinctrl-ats3605 b01c0000.pinctrl: request pin 73 (P_NAND_CEB3) for ats3605-pinctrl-gpio:73
+[    2.531291] soc-audio soc-audio: no of_node; not parsing pinctrl DT
+[    2.531321] soc-audio soc-audio: ASoC: machine s900_link should use snd_soc_register_card()
+[    2.531507] [SNDRV]:[atc2603c_probe] atc2603c_probe!
+[    2.531507] 
+[    2.531511] [SNDRV]:[atc2603c_probe] codec->name = atc260x-audio
+[    2.531511] 
+[    2.540006] pinctrl core: add 11 pinmux maps
+[    2.540042] pinctrl-ats3605 b01c0000.pinctrl: found group selector 47 for mfp3_11_9
+[    2.540056] pinctrl-ats3605 b01c0000.pinctrl: found group selector 48 for mfp3_8_6
+[    2.540069] pinctrl-ats3605 b01c0000.pinctrl: found group selector 49 for mfp3_5_3
+[    2.540082] pinctrl-ats3605 b01c0000.pinctrl: found group selector 56 for sd1_dummy
+[    2.540094] pinctrl-ats3605 b01c0000.pinctrl: found group selector 34 for mfp2_10_9
+[    2.540104] pinctrl-ats3605 b01c0000.pinctrl: invalid group "mfp2_4_3" for function "sd1"
+[    2.540183] pinctrl-ats3605 b01c0000.pinctrl: request pin 99 (P_SENSOR1_DATA1) for b0344000.mmc
+[    2.540189] pinmux_request_check_gpio,pin=99
+[    2.540199] pinctrl-ats3605 b01c0000.pinctrl: request pin 98 (P_SENSOR1_DATA0) for b0344000.mmc
+[    2.540202] pinmux_request_check_gpio,pin=98
+[    2.540212] pinctrl-ats3605 b01c0000.pinctrl: request pin 101 (P_SENSOR1_DATA3) for b0344000.mmc
+[    2.540216] pinmux_request_check_gpio,pin=101
+[    2.540224] pinctrl-ats3605 b01c0000.pinctrl: request pin 100 (P_SENSOR1_DATA2) for b0344000.mmc
+[    2.540228] pinmux_request_check_gpio,pin=100
+[    2.540237] pinctrl-ats3605 b01c0000.pinctrl: request pin 103 (P_SENSOR1_DATA5) for b0344000.mmc
+[    2.540241] pinmux_request_check_gpio,pin=103
+[    2.540249] pinctrl-ats3605 b01c0000.pinctrl: request pin 102 (P_SENSOR1_DATA4) for b0344000.mmc
+[    2.540252] pinmux_request_check_gpio,pin=102
+[    2.540262] pinctrl-ats3605 b01c0000.pinctrl: request pin 85 (P_SD1_CLK) for b0344000.mmc
+[    2.540266] pinmux_request_check_gpio,pin=85
+[    2.540274] pinctrl-ats3605 b01c0000.pinctrl: request pin 84 (P_SD1_CMD) for b0344000.mmc
+[    2.540278] pinmux_request_check_gpio,pin=84
+[    2.540286] pinctrl-ats3605 b01c0000.pinctrl: request pin 78 (P_SD0_D4) for b0344000.mmc
+[    2.540290] pinmux_request_check_gpio,pin=78
+[    2.540298] pinctrl-ats3605 b01c0000.pinctrl: request pin 79 (P_SD0_D5) for b0344000.mmc
+[    2.540301] pinmux_request_check_gpio,pin=79
+[    2.540309] pinctrl-ats3605 b01c0000.pinctrl: request pin 80 (P_SD0_D6) for b0344000.mmc
+[    2.540312] pinmux_request_check_gpio,pin=80
+[    2.540320] pinctrl-ats3605 b01c0000.pinctrl: request pin 81 (P_SD0_D7) for b0344000.mmc
+[    2.540323] pinmux_request_check_gpio,pin=81
+[    2.566597] pinctrl core: add 13 pinmux maps
+[    2.566634] pinctrl core: add 7 pinmux maps
+[    2.566661] pinctrl-ats3605 b01c0000.pinctrl: found group selector 31 for mfp2_19_17
+[    2.566674] pinctrl-ats3605 b01c0000.pinctrl: found group selector 32 for mfp2_16_14
+[    2.566685] pinctrl-ats3605 b01c0000.pinctrl: found group selector 33 for mfp2_13_11
+[    2.566697] pinctrl-ats3605 b01c0000.pinctrl: found group selector 35 for mfp2_8_7
+[    2.566709] pinctrl-ats3605 b01c0000.pinctrl: found group selector 36 for mfp2_6_5
+[    2.566760] pinctrl-ats3605 b01c0000.pinctrl: found group selector 77 for paddrv1_23_22
+[    2.566772] pinctrl-ats3605 b01c0000.pinctrl: found group selector 79 for paddrv1_19_18
+[    2.566785] pinctrl-ats3605 b01c0000.pinctrl: found group selector 80 for paddrv1_17_16
+[    2.566798] pinctrl-ats3605 b01c0000.pinctrl: found group selector 35 for mfp2_8_7
+[    2.566810] pinctrl-ats3605 b01c0000.pinctrl: found group selector 36 for mfp2_6_5
+[    2.566831] pinctrl-ats3605 b01c0000.pinctrl: found group selector 79 for paddrv1_19_18
+[    2.566843] pinctrl-ats3605 b01c0000.pinctrl: found group selector 80 for paddrv1_17_16
+[    2.566855] pinctrl-ats3605 b01c0000.pinctrl: found group selector 31 for mfp2_19_17
+[    2.566867] pinctrl-ats3605 b01c0000.pinctrl: found group selector 32 for mfp2_16_14
+[    2.566877] pinctrl-ats3605 b01c0000.pinctrl: request pin 82 (P_SD0_CMD) for b0340000.mmc
+[    2.566881] pinmux_request_check_gpio,pin=82
+[    2.566893] pinctrl-ats3605 b01c0000.pinctrl: request pin 83 (P_SD0_CLK) for b0340000.mmc
+[    2.566896] pinmux_request_check_gpio,pin=83
+[    2.566909] pinctrl-ats3605 b01c0000.pinctrl: request pin 74 (P_SD0_D0) for b0340000.mmc
+[    2.566912] pinmux_request_check_gpio,pin=74
+[    2.566922] pinctrl-ats3605 b01c0000.pinctrl: request pin 75 (P_SD0_D1) for b0340000.mmc
+[    2.566925] pinmux_request_check_gpio,pin=75
+[    2.567665] pinctrl core: add 13 pinmux maps
+[    2.567697] pinctrl core: add 7 pinmux maps
+[    2.567720] pinctrl-ats3605 b01c0000.pinctrl: found group selector 31 for mfp2_19_17
+[    2.567732] pinctrl-ats3605 b01c0000.pinctrl: found group selector 32 for mfp2_16_14
+[    2.567744] pinctrl-ats3605 b01c0000.pinctrl: found group selector 33 for mfp2_13_11
+[    2.567756] pinctrl-ats3605 b01c0000.pinctrl: found group selector 35 for mfp2_8_7
+[    2.567768] pinctrl-ats3605 b01c0000.pinctrl: found group selector 36 for mfp2_6_5
+[    2.567816] pinctrl-ats3605 b01c0000.pinctrl: found group selector 77 for paddrv1_23_22
+[    2.567829] pinctrl-ats3605 b01c0000.pinctrl: found group selector 79 for paddrv1_19_18
+[    2.567841] pinctrl-ats3605 b01c0000.pinctrl: found group selector 80 for paddrv1_17_16
+[    2.567854] pinctrl-ats3605 b01c0000.pinctrl: found group selector 35 for mfp2_8_7
+[    2.567866] pinctrl-ats3605 b01c0000.pinctrl: found group selector 36 for mfp2_6_5
+[    2.567888] pinctrl-ats3605 b01c0000.pinctrl: found group selector 79 for paddrv1_19_18
+[    2.567900] pinctrl-ats3605 b01c0000.pinctrl: found group selector 80 for paddrv1_17_16
+[    2.567912] pinctrl-ats3605 b01c0000.pinctrl: found group selector 31 for mfp2_19_17
+[    2.567924] pinctrl-ats3605 b01c0000.pinctrl: found group selector 32 for mfp2_16_14
+[    2.567933] pinctrl-ats3605 b01c0000.pinctrl: request pin 74 (P_SD0_D0) for b0340000.mmc
+[    2.567937] pinmux_request_check_gpio,pin=74
+[    2.567947] pinctrl-ats3605 b01c0000.pinctrl: request pin 75 (P_SD0_D1) for b0340000.mmc
+[    2.567951] pinmux_request_check_gpio,pin=75
+[    2.567960] pinctrl-ats3605 b01c0000.pinctrl: request pin 76 (P_SD0_D2) for b0340000.mmc
+[    2.567963] pinmux_request_check_gpio,pin=76
+[    2.567971] pinctrl-ats3605 b01c0000.pinctrl: request pin 77 (P_SD0_D3) for b0340000.mmc
+[    2.567975] pinmux_request_check_gpio,pin=77
+[    2.567984] pinctrl-ats3605 b01c0000.pinctrl: request pin 82 (P_SD0_CMD) for b0340000.mmc
+[    2.567987] pinmux_request_check_gpio,pin=82
+[    2.567997] pinctrl-ats3605 b01c0000.pinctrl: request pin 83 (P_SD0_CLK) for b0340000.mmc
+[    2.568000] pinmux_request_check_gpio,pin=83
+[    2.590021] atc2603c_check_bat_online wait battery detect over,data:0x200
+[    2.590479] atc2603c_check_bat_online battery exist:1
+[    2.590645] ATC260X_OCV_GAUGE: [init_gauge_cap] inited ch_resistor : 220, inited disch_resistor:260
+[    2.590956] ATC260X_OCV_GAUGE: soc_init_after_reboot, soc_stored:100000
+[    2.597820] pinctrl-ats3605 b01c0000.pinctrl: pin 0 is not registered so it cannot be requested
+[    2.597828] pinctrl-ats3605 b01c0000.pinctrl: pin-0 (ats3605-pinctrl-gpio:0) status -22
+[    2.597835] mmc1: owl_mmc_get_ro: Failed to request GPIO 0
+[    2.597838] owl_mmc_get_ro: Card read-only status -38
+[    2.597841] mmc1: host does not support reading read-only switch. assuming write-enable.
+[    2.599931] sd card init ok
+[    2.599946] mmc1: new high speed SDHC card at address 0001
+[    2.600116] mmcblk mmc1:0001: no of_node; not parsing pinctrl DT
+[    2.600445] mmcblk0: mmc1:0001 SD16G 29.1 GiB 
+[    2.601998]  mmcblk0: p1
+[    2.617640] ATC260X_OCV_GAUGE: [soc_init_after_reboot, 1124]  soc_stored=100000, soc_real=100000, soc_now:100000
+[    2.674895] atc2603c_probe ok!
+[    2.677866] [SNDRV]:[s900_link_snd_init] s900_link_init() called
+[    2.677866] 
+[    3.040336] <MON check_driver_state:1000>pStatus->detect_valid=0,->det_phase=0
+[    3.047589] <MON umonitor_timer_func:681>entring umonitor_timer_func,pStatus->detect_valid=0,->detect_type=3
+[    3.060056] soc-audio soc-audio:  atc2603c-dai <-> owl-audio-i2s mapping ok
+[    3.067984] link_init ok!
+[    3.070625] owl_hdmi_init
+[    3.073480] owl-hdmi-audio owl-hdmi-audio: no of_node; not parsing pinctrl DT
+[    3.073762] [SNDRV]:[s900_hdmi_link_snd_init] s900_hdmi_link_init() called
+[    3.073762] 
+[    3.075078] owl-hdmi-audio owl-hdmi-audio:  snd-soc-dummy-dai <-> owl-audio-hdmi mapping ok
+[    3.084317] u32 classifier
+[    3.087021]     Actions configured
+[    3.090444] Netfilter messages via NETLINK v0.30.
+[    3.095223] nf_conntrack version 0.5.0 (3385 buckets, 13540 max)
+[    3.101841] ctnetlink v0.93: registering with nfnetlink.
+[    3.107565] xt_time: kernel timezone is -0000
+[    3.112268] ip_tables: (C) 2000-2006 Netfilter Core Team
+[    3.117764] ipt_CLUSTERIP: ClusterIP Version 0.8 loaded successfully
+[    3.124184] arp_tables: (C) 2002 David S. Miller
+[    3.128865] TCP: cubic registered
+[    3.132197] Initializing XFRM netlink socket
+[    3.137126] NET: Registered protocol family 10
+[    3.142456] mip6: Mobile IPv6
+[    3.145463] ip6_tables: (C) 2000-2006 Netfilter Core Team
+[    3.151108] sit: IPv6 over IPv4 tunneling driver
+[    3.156996] NET: Registered protocol family 17
+[    3.161504] NET: Registered protocol family 15
+[    3.165943] lib80211: common routines for IEEE802.11 drivers
+[    3.171656] lib80211_crypt: registered algorithm 'NULL'
+[    3.171668] lib80211_crypt: registered algorithm 'WEP'
+[    3.171676] lib80211_crypt: registered algorithm 'CCMP'
+[    3.171684] lib80211_crypt: registered algorithm 'TKIP'
+[    3.171973] VFP support v0.3: implementor 41 architecture 2 part 30 variant 5 rev 1
+[    3.179640] owl_init_late()
+[    3.182447] ThumbEE CPU extension supported.
+[    3.187350] [ats3605] pm init
+[    3.190804] ldo8: disabling
+[    3.194048] regulator-dummy: disabling
+[    3.198644] atc260x-rtc atc2603c-rtc.0: setting system clock to 2022-01-05 08:34:03 UTC (1641371643)
+[    3.207825] cpu0_table: add 50 mv
+[    3.211410] cpu set cpu vdd: 1100000
+[    3.215195]   table c071196c, i 0, cpu_dev c075e608, clk 900000000, volt 1175000
+[    3.222636]   table c071196c, i 1, cpu_dev c075e608, clk 876000000, volt 1150000
+[    3.230042]   table c071196c, i 2, cpu_dev c075e608, clk 768000000, volt 1075000
+[    3.237429]   table c071196c, i 3, cpu_dev c075e608, clk 600000000, volt 1050000
+[    3.244832]   table c071196c, i 4, cpu_dev c075e608, clk 240000000, volt 1025000
+[    3.253484] cpu0_cpufreq_driver_init: locking_frequency: 900000
+[    3.259633] clk: Not disabling unused clocks
+[    3.266974] ALSA device list:
+[    3.270016]   #0: s900_link
+[    3.272805]   #1: OWL HDMI
+[    3.276133] Freeing unused kernel memory: 204K (c06a7000 - c06da000)
+[    3.489956] find ksyms SLCNandIdTable_GetNandInfo!
+[    3.494891] c&d_ftl_Aug 10 2023_17:26:49	PageSize=2K NandFlash
+[    3.500904] DTS cfg: pad_drv=3, use_clk=20, extra_ecc_enable=-1, downgrade_mode=-1, no_battery_enable=-1
+[    3.510584] (CMU_NANDPLL=0x0000010a, CMU_NANDCCLK=0x00000001
+[    3.526396] SLCNandIdTable_GetNandInfo 1052
+[    3.530589] SLCNandIdTable_GetNandInfo 1064
+[    3.534770] leopard_request_dma_sync_addr,i:3
+[    3.539117] __initNandDma, NAND use DMA no:32
+[    3.543502] PDL_NandOpBaseInit 494
+[    3.546901] l_dvfslevel=0x7021: (PAD_CTL=0x00000002, PAD_DRV2=0x00000200, PAD_PULLCTL2=0x001f07e1, MFP_CTL3=0x80000249
+[    3.557592] (CMU_NANDPLL=0x0000010a, CMU_NANDCCLK=0x00000001
+[    3.563265] (NAND_CTL=0x00000000, NAND_DMA_ADDR=0x00000000, NAND_DMA_CTL=0x20000000
+[    3.570973] __CheckChipIdAndTable 346: nandId[0]=9590daba, nandId[1]=90daba46
+[    3.578094] SLCNandIdTable_GetNandInfo 1052
+[    3.582285] SLCNandIdTable_GetNandInfo 1064
+[    3.586486] bootBlockNum=26
+[    3.589279] afi config: ce=0x0, clk=20, paddrv=0x3, extraEccMode=0, noBatteryMode=0, downGradeMode=0, BadBlockRunRec=0, nandReserved=0x00000000
+[    3.602136] PDL_ECCUnitInfoBrom = 
+[    3.605528] {
+[    3.607100]     .randomizer     = 2
+[    3.610591]     .eccBits        = 24
+[    3.614158]     .uDataSize      = 4
+[    3.617636]     .paritySize     = 42
+[    3.621214]     .eccUnitSize    = 1024
+[    3.624954]     .pageSize       = 2048
+[    3.628694]     .spareSize      = 128
+[    3.632357] }
+[    3.633930] PDL_ECCUnitInfoOrg = 
+[    3.637236] {
+[    3.638808]     .randomizer     = 2
+[    3.642299]     .eccBits        = 24
+[    3.645867]     .uDataSize      = 8
+[    3.649347]     .paritySize     = 42
+[    3.652923]     .eccUnitSize    = 1024
+[    3.656664]     .pageSize       = 2048
+[    3.660415]     .spareSize      = 128
+[    3.664067] }
+[    3.665639] PDL_ECCUnitInfoExtra = 
+[    3.669116] {
+[    3.670700]     .randomizer     = 2
+[    3.674180]     .eccBits        = 60
+[    3.677745]     .uDataSize      = 8
+[    3.681236]     .paritySize     = 106
+[    3.684891]     .eccUnitSize    = 1024
+[    3.688631]     .pageSize       = 1024
+[    3.692382]     .spareSize      = 1152
+[    3.696121] }
+[    3.697693] PDL_ECCUnitInfoForSystem is PDL_ECCUnitInfoOrg
+[    3.703204] nand_id_boot 0x9590daba, 0x90daba46
+[    3.707937] i 1, nand_id 0x00000000, 0x00000000
+[    3.712682] i 2, nand_id 0x00000000, 0x00000000
+[    3.717416] i 3, nand_id 0x00000000, 0x00000000
+[    3.721948] ChipCnt = 1, ChipBitMap 0x0
+[    3.725775] PDL_ConfigInfo.maxClk=20
+[    3.729446] CMU_NANDPLL=124, CMU_NANDCCLK=3
+[    3.733631] PDL_ConfigInfo.PadDrvLevel=0x00000003
+[    3.738359] __NandInit 795
+[    3.741080] l_dvfslevel=0x7021: (PAD_CTL=0x00000002, PAD_DRV2=0x00000200, PAD_PULLCTL2=0x001f07e1, MFP_CTL3=0x80000249
+[    3.751769] (CMU_NANDPLL=0x00000124, CMU_NANDCCLK=0x00000003
+[    3.757417] (NAND_CTL=0x00000000, NAND_DMA_ADDR=0x00000000, NAND_DMA_CTL=0x20000000
+[    3.765247] readBasicinfoBlock(26)
+[    3.773839] logicalStartPhyBlk=26
+[    3.777162] multiplaneStartBlk=26 PlanePerDie=1
+[    3.782847] mapMultiplaneBlk1=28
+[    3.786389] mapMultiplaneBlk2=29
+[    3.790600] programedPageNum1=25
+[    3.794777] programedPageNum2=30
+[    3.801208] find valid log page from mapBlock 28!
+[    3.805910] find valid log page from mapBlock 29!
+[    3.810644] logSeq1=10, logSeq2=11
+[    3.814981] __reloadVirtualMapTableInDie success!
+[    3.819753] Bad Block List:
+[    3.819753] die0: 0(2) 1(2) 2(2) 3(2) 4(2) 5(2) 6(2) 7(2) 8(2) 9(2) 10(2) 11(2) 12(2) 13(2) 14(2) 15(2) 16(2) 17(2) 18(2) 19(2) 20(2) 21(2) 22(2) 23(2) 24(2) 25(2) 26(1) 27(1)
+[    3.819753] Total block 2048,bad block 28.
+[    3.859959] dieNum              =1
+[    3.863371] blkNumPerDie        =1996
+[    3.867026] reserveBlkNumPerDie =20
+[    3.870580] pageNumPerBlk       =64
+[    3.874061] pageNumPerSecureBlk =64
+[    3.877541] orderBlkNum         =1
+[    3.880953] unsafeMode          =0
+[    3.884347] noBatteryMode       =0
+[    3.887738] pageSize            =2048
+[    3.891406] maxRRCount          =0
+[    3.894801] ECCBitNum           =24
+[    3.898280] eraseLimit          =10000
+[    3.902055] readLimit           =1000000
+[    3.905970] partitionNum        =1
+[    3.923031] nand0 pages=126464
+[    3.932411]  nand0: p1 p2 p3 p4 p5 p6 p7
+[    4.000030] <MON check_driver_state:1000>pStatus->detect_valid=0,->det_phase=0
+[    4.097450] ats3605_chipid_init
+[    4.101004] no blk dev
+[    4.103364] read MiscInfoHeader failed
+[    4.107111] read Head failed
+[    4.110115] hdmi_hdcp: hdcp_read_key, failed to read hdcp key from secure storage(-11)
+[    4.220949] FAT-fs (nand0p5): utf8 is not a recommended IO charset for FAT filesystems, filesystem will be case sensitive!
+[    4.222188] FAT-fs (nand0p5): Volume was not properly unmounted. Some data may be corrupt. Please run fsck.
+[    4.468194] pvrsrvkm b0350000.gpu: start latency exceeded, new value 750 ns
+[    4.468216] pvrsrvkm b0350000.gpu: state restore latency exceeded, new value 1250 ns
+[    4.468356] pvrsrvkm b0350000.gpu: stop latency exceeded, new value 500 ns
+[    4.468374] pvrsrvkm b0350000.gpu: state save latency exceeded, new value 1250 ns
+[    4.468693] gpu: Power-off latency exceeded, new value 306750 ns
+[    4.513755] PVR_K: UM DDK-(4004414) and KM DDK-(4004414) match. [ OK ]
+[    4.517671] pvrsrvkm b0350000.gpu: state restore latency exceeded, new value 2250 ns
+[    4.517952] pvrsrvkm b0350000.gpu: stop latency exceeded, new value 750 ns
+[    4.518304] gpu: Power-off latency exceeded, new value 331000 ns
+[    4.521894] pvrsrvkm b0350000.gpu: stop latency exceeded, new value 1000 ns
+[    4.521919] pvrsrvkm b0350000.gpu: start latency exceeded, new value 1250 ns
+[    4.522283] gpu: Power-off latency exceeded, new value 350000 ns
+[    4.530423] t:25070, (0x1074033e,0x49a0c548)
+[    4.671666] random: upgtool urandom read with 72 bits of entropy available
+[    4.864747] atc260x_adckeypad_init ()-2403: tiny_mode=1,tiny_name=charge
+[    4.871887] atc260x-adckeypad atc2603c-adckeypad.0: Probing...
+[    4.871900] atc260x_adckeypad_probe---,pdev=ce1d0a00,&pdev->dev=ce1d0a10
+[    4.878604] off_gpios, gpio_num=-2---,active_low=0
+[    4.883415] atc260x_adckeypad_probe ()-2122: ---------------onoff_gpio.gpio=-1
+[    4.890664] atc260x-adckeypad atc2603c-adckeypad.0: poll_interval = 10ms
+[    4.890675] joy_num = 2
+[    4.893115] joy_num = 1
+[    4.895677] matrix_keypad_parse_of_keymap2()-568: -----000 ,keymap size=20,rows=4,cols=5
+[    4.903827] pdata->active_low=1,pdata->clustered_irq=0 
+[    4.909061] pinctrl-ats3605 b01c0000.pinctrl: request pin 97 (P_SENSOR1_HSYNC) for ats3605-pinctrl-gpio:97
+[    4.909085] pinctrl-ats3605 b01c0000.pinctrl: request pin 106 (P_SENSOR1_CKOUT) for ats3605-pinctrl-gpio:106
+[    4.909106] pinctrl-ats3605 b01c0000.pinctrl: request pin 107 (P_SENSOR1_PCLK) for ats3605-pinctrl-gpio:107
+[    4.909126] pinctrl-ats3605 b01c0000.pinctrl: request pin 96 (P_SENSOR1_VSYNC) for ats3605-pinctrl-gpio:96
+[    4.909147] pinctrl-ats3605 b01c0000.pinctrl: request pin 65 (P_LCD0_D9) for ats3605-pinctrl-gpio:65
+[    4.909167] pinctrl-ats3605 b01c0000.pinctrl: request pin 66 (P_LCD0_D8) for ats3605-pinctrl-gpio:66
+[    4.909186] pinctrl-ats3605 b01c0000.pinctrl: request pin 68 (P_LCD0_D1) for ats3605-pinctrl-gpio:68
+[    4.909205] pinctrl-ats3605 b01c0000.pinctrl: request pin 69 (P_LCD0_D0) for ats3605-pinctrl-gpio:69
+[    4.909216] matrix_keypad_init_gpio()-1040:  to request_irq() ,pdata->clustered_irq=0
+[    4.917249]  request_irq() over
+[    4.920666] input: atc2603c-adckeypad as /devices/b0188000.i2c/i2c-2/2-0065/atc2603c-adckeypad.0/input/input1
+[    4.921129] -----001 probe over
+[    4.926470] tiny_mode=1
+[    4.935738] watchdog watchdog0: enabling watchdog timeout=60s
+[    4.957070] backlight owl_backlight: owl pwm bl update status
+[    4.957091] backlight owl_backlight: bl->props.power = 0
+[    4.957102] backlight owl_backlight: bl->props.fb_blank = 0
+[    4.957117] backlight owl_backlight: owl_pwm_bl_update_status: brightness = 450, power_state = 1
+[    4.957128] backlight owl_backlight: duty_ns = 55d4
+[    4.957138] backlight owl_backlight: period_ns = c350
+[    4.957366] backlight owl_backlight: owl pwm bl update status
+[    4.957382] backlight owl_backlight: bl->props.power = 0
+[    4.957392] backlight owl_backlight: bl->props.fb_blank = 0
+[    4.957405] backlight owl_backlight: owl_pwm_bl_update_status: brightness = 420, power_state = 1
+[    4.957417] backlight owl_backlight: duty_ns = 501b
+[    4.957427] backlight owl_backlight: period_ns = c350
+[    4.962790] set pwm:34179  period:50000
+[    5.000040] <MON check_driver_state:1000>pStatus->detect_valid=0,->det_phase=0
+[    5.098464] udc removed
+[    5.110666] <MON mon_config_store:824>strict_strtoul:1
+[    5.110690] <MON mon_config_store:892>
+[    5.110690]  idpin_soft set =1!!
+[    5.118833] ----set pa: 0
+[    5.118851] set_pa_onoff()173:status=0,speaker_gpio_num=73
+[    5.118851] 
+[    5.125062] ----set pa: 1
+[    5.125079] set_pa_onoff()173:status=1,speaker_gpio_num=73
+[    5.125079] 
+[    5.126086] link_hw_params ok!
+[    5.126109] atc2603c_audio_hw_params hw_init_flag=1
+[    5.126118] atc2603c_audio_hw_params 4WIRE MODE<6>[    5.136621] ----set pa: 1
+[    5.136638] set_pa_onoff()173:status=1,speaker_gpio_num=73
+[    5.136638] 
+[    5.137221] reset and enable tx i2s fifo!
+[    5.209073] ----set pa: 1
+[    5.209097] set_pa_onoff()173:status=1,speaker_gpio_num=73
+[    5.209097] 
+[    5.216830] <MON mon_config_store:824>strict_strtoul:5
+[    5.216993] <MON mon_config_store:824>strict_strtoul:1
+[    5.217010] <MON umonitor_detection:968>umonitor_detection:1
+[    5.217023] <MON usb2_hal_aotg_enable:708>aotg mon enable
+[    5.217038] <MON usb2_hardware_init:689>usbecs value is 0f00104f------>/n
+[    5.217053] <MON usb2_monitor_vbus_power:434>usb_monitor_vbus_power 0000
+[    5.217930] <MON umonitor_timer_func:681>entring umonitor_timer_func,pStatus->detect_valid=1,->detect_type=3
+[    5.217954] <MON usb_timer_process_step0:528>entring usb_timer_process_step0,pStatus->message_status=0
+[    5.217972] <MON usb2_get_idpin_state:540>idpin_gpio value= 1
+[    5.217985] <MON usb_timer_process_step0:558>idpin is 1
+[    5.217998] <MON usb_timer_process_step0:590>device detect prepare!!!!
+[    5.218011] <MON usb2_set_dp_500k_15k:600>dpdm is 0f001043
+[    5.232221] graphics fb0: old owl_fb_pan_display: offset, 0x0
+[    5.232234] owl-fb framebuffer.9: __ofbi_set_video_info: v_info is_original_scaled 0
+[    5.232242] owl-fb framebuffer.9: v_info pitch 960, bits_per_pixel 16
+[    5.232262] owl_panel: owl_panel_get_draw_size, x3 display width -834978344 , height -834978340
+[    5.232269] owl_panel: owl_panel_get_draw_size, x3 display width -834978360 , height -834978356
+[    5.232278] ###DE fifo underflow 0x4
+[    5.234271] pvrsrvkm b0350000.gpu: stop latency exceeded, new value 2500 ns
+[    5.234302] pvrsrvkm b0350000.gpu: state save latency exceeded, new value 1500 ns
+[    5.710046] <MON umonitor_timer_func:681>entring umonitor_timer_func,pStatus->detect_valid=1,->detect_type=3
+[    5.710096] <MON umonitor_timer_func:702>->det_phase:0 ,pStatus->device_confirm=0
+[    5.710133] <MON usb2_get_idpin_state:540>idpin_gpio value= 1
+[    5.710168] <MON usb_timer_det_pc_charger:264>entring usb_timer_det_pc_charger,/npStatus->device_confirm=0
+[    5.710458] <MON usb2_get_vbus_state:486> ret: 1,adc_val=4914,charger_support_adaptor_type=0
+[    5.710500] <MON usb2_get_vbus_state:489>usb2_get_vbus_state state: 1
+[    5.710534] <MON usb_timer_det_pc_charger:278>vbus is high!!!!!!!,pStatus->message_status=0
+[    5.710566] <MON usb_timer_det_pc_charger:311>00--device_confirm->1,USB_DET_DEVICE_DEBUOUNCING
+[    5.719989] <MON umonitor_timer_func:681>entring umonitor_timer_func,pStatus->detect_valid=1,->detect_type=3
+[    5.720034] <MON umonitor_timer_func:702>->det_phase:0 ,pStatus->device_confirm=1
+[    5.720069] <MON usb2_get_idpin_state:540>idpin_gpio value= 1
+[    5.720103] <MON usb_timer_det_pc_charger:264>entring usb_timer_det_pc_charger,/npStatus->device_confirm=1
+[    5.720382] <MON usb2_get_vbus_state:486> ret: 1,adc_val=4921,charger_support_adaptor_type=0
+[    5.720423] <MON usb2_get_vbus_state:489>usb2_get_vbus_state state: 1
+[    5.720457] <MON usb_timer_det_pc_charger:278>vbus is high!!!!!!!,pStatus->message_status=0
+[    5.720490] <MON usb2_set_dp_500k_15k:600>dpdm is 0f00104f
+[    5.720520] <MON usb_timer_det_pc_charger:320>00--device_confirm->2,USB_DET_DEVICE_DEBUOUNCING
+[    5.801018] graphics fb0: old owl_fb_pan_display: offset, 0x816
+[    5.801030] owl-fb framebuffer.9: __ofbi_set_video_info: v_info is_original_scaled 0
+[    5.801037] owl-fb framebuffer.9: v_info pitch 960, bits_per_pixel 16
+[    5.801048] owl_panel: owl_panel_get_draw_size, x3 display width -834978344 , height -834978340
+[    5.801055] owl_panel: owl_panel_get_draw_size, x3 display width -834978360 , height -834978356
+[    5.801063] ###DE fifo underflow 0x4
+[    6.019979] <MON umonitor_timer_func:681>entring umonitor_timer_func,pStatus->detect_valid=1,->detect_type=3
+[    6.020027] <MON umonitor_timer_func:702>->det_phase:0 ,pStatus->device_confirm=2
+[    6.020065] <MON usb2_get_idpin_state:540>idpin_gpio value= 1
+[    6.020100] <MON usb_timer_det_pc_charger:264>entring usb_timer_det_pc_charger,/npStatus->device_confirm=2
+[    6.020375] <MON usb2_get_vbus_state:486> ret: 1,adc_val=4914,charger_support_adaptor_type=0
+[    6.020415] <MON usb2_get_vbus_state:489>usb2_get_vbus_state state: 1
+[    6.020448] <MON usb_timer_det_pc_charger:278>vbus is high!!!!!!!,pStatus->message_status=0
+[    6.020480] <MON usb_timer_det_pc_charger:329>00--device_confirm->3,USB_DET_DEVICE_DEBUOUNCING
+[    6.049982] <MON umonitor_timer_func:681>entring umonitor_timer_func,pStatus->detect_valid=1,->detect_type=3
+[    6.050026] <MON umonitor_timer_func:702>->det_phase:0 ,pStatus->device_confirm=3
+[    6.050062] <MON usb2_get_idpin_state:540>idpin_gpio value= 1
+[    6.050096] <MON usb_timer_det_pc_charger:264>entring usb_timer_det_pc_charger,/npStatus->device_confirm=3
+[    6.050367] <MON usb2_get_vbus_state:486> ret: 1,adc_val=4921,charger_support_adaptor_type=0
+[    6.050407] <MON usb2_get_vbus_state:489>usb2_get_vbus_state state: 1
+[    6.050440] <MON usb_timer_det_pc_charger:278>vbus is high!!!!!!!,pStatus->message_status=0
+[    6.050472] <MON usb_timer_det_pc_charger:343>00--get_linestates()=0 ,to USB_DET_DEVICE_PC
+[    6.050511] <MON umonitor_timer_func:781>
+[    6.050511] /home/sjg/work/game_gy/openwrt/kernel/drivers/usb/legacy/monitor/umonitor_core.c--781, SYS_MSG_USB_B_IN
+[    6.050553] 
+[    6.050553] /home/sjg/work/game_gy/openwrt/kernel/drivers/usb/legacy/monitor/umonitor_core.c--782, SYS_MSG_USB_B_IN
+[    6.050596] /home/sjg/work/game_gy/openwrt/kernel/drivers/usb/legacy/monitor/umonitor_api.c--1185, wake_lock !!! ---MON_MSG_USB_B_IN
+[    6.050629] aotg start pc/adapter detection...
+[    6.110128] hdmi_hdcp: hdcp_read_key, failed to read hdcp key from secure storage(-1)
+[    6.134525] ----set pa: 1
+[    6.134571] set_pa_onoff()173:status=1,speaker_gpio_num=73
+[    6.134571] 
+[    6.134831] [SNDRV]:[atc2603c_audio_hw_free] atc2603c_audio_hw_free
+[    6.134831] 
+[    6.134872] SNDRV_PCM_STREAM_PLAYBACK
+[    6.197890] owl_panel: owl_panel_disable, state 1, power_off_delay 0, disable_delay 0
+[    6.197932] owl_ctrl: owl_ctrl_disable, ctrl disable start
+[    6.197992] hdmi-ip-sx00 b02c0000.hdmi: owl_hdmic_disable
+[    6.299935] owl_ctrl: owl_ctrl_power_off, ctrl power off ... ...
+[    6.324589] FAT-fs (nand0p7): utf8 is not a recommended IO charset for FAT filesystems, filesystem will be case sensitive!
+[    6.326848] FAT-fs (nand0p7): Volume was not properly unmounted. Some data may be corrupt. Please run fsck.
+[    6.329340] FAT-fs (mmcblk0p1): utf8 is not a recommended IO charset for FAT filesystems, filesystem will be case sensitive!
+[    6.336465] FAT-fs (mmcblk0p1): Volume was not properly unmounted. Some data may be corrupt. Please run fsck.
+[    6.364641] udc added
+[    6.385685] msc_nluns: 1
+[    6.385888] android_usb gadget: Mass Storage Function, version: 2009/09/11
+[    6.385899] android_usb gadget: Number of LUNs=1
+[    6.385910]  lun0: LUN: removable file: (no medium)
+[    6.386168] android_usb gadget: android_usb ready
+[    6.386178] registered gadget driver 'android_usb'
+[    6.396617] adb_open
+[    6.397425] android_usb: already disabled
+[    6.402180] open usb_serialnumber ERR
+[    6.402209] adb_bind_config
+[    6.403685] <MON mon_config_store:824>strict_strtoul:1
+[    6.403700] <MON umonitor_detection:968>umonitor_detection:1
+[    6.403709] <MON usb2_hal_aotg_enable:708>aotg mon enable
+[    6.403720] <MON usb2_hardware_init:689>usbecs value is 0f00114f------>/n
+[    6.403730] <MON usb2_monitor_vbus_power:434>usb_monitor_vbus_power 0000
+[    6.404291] <MON umonitor_timer_func:681>entring umonitor_timer_func,pStatus->detect_valid=1,->detect_type=3
+[    6.404305] <MON usb_timer_process_step0:528>entring usb_timer_process_step0,pStatus->message_status=1
+[    6.404317] <MON usb_timer_process_step0:532>
+[    6.404317] /home/sjg/work/game_gy/openwrt/kernel/drivers/usb/legacy/monitor/umonitor_core.c--532, SYS_MSG_USB_B_OUT
+[    6.404330] /home/sjg/work/game_gy/openwrt/kernel/drivers/usb/legacy/monitor/umonitor_api.c--1201, wake_unlock !!! ---MON_MSG_USB_B_OUT
+[    6.404346] atc260x_set_usb_plugin_type, notype
+[    6.408941] <MON usb2_get_idpin_state:540>idpin_gpio value= 1
+[    6.408951] <MON usb_timer_process_step0:558>idpin is 1
+[    6.408960] <MON usb_timer_process_step0:590>device detect prepare!!!!
+[    6.408970] <MON usb2_set_dp_500k_15k:600>dpdm is 0f001143
+[    6.438153] adb_release
+[    6.442773] android_work: did not send uevent (0 0   (null))
+[    6.448988] udc removed
+[    6.480357] graphics fb0: old owl_fb_pan_display: offset, 0x1632
+[    6.480369] owl-fb framebuffer.9: __ofbi_set_video_info: v_info is_original_scaled 0
+[    6.480376] owl-fb framebuffer.9: v_info pitch 960, bits_per_pixel 16
+[    6.480387] owl_panel: owl_panel_get_draw_size, x3 display width -834978344 , height -834978340
+[    6.480393] owl_panel: owl_panel_get_draw_size, x3 display width -834978360 , height -834978356
+[    6.480402] ###DE fifo underflow 0x4
+[    6.540194] t:25459, (0x1074033e,0x49a0c548)
+[    6.899954] <MON umonitor_timer_func:681>entring umonitor_timer_func,pStatus->detect_valid=1,->detect_type=3
+[    6.900002] <MON umonitor_timer_func:702>->det_phase:0 ,pStatus->device_confirm=0
+[    6.900038] <MON usb2_get_idpin_state:540>idpin_gpio value= 1
+[    6.900073] <MON usb_timer_det_pc_charger:264>entring usb_timer_det_pc_charger,/npStatus->device_confirm=0
+[    6.900350] <MON usb2_get_vbus_state:486> ret: 1,adc_val=4965,charger_support_adaptor_type=0
+[    6.900392] <MON usb2_get_vbus_state:489>usb2_get_vbus_state state: 1
+[    6.900426] <MON usb_timer_det_pc_charger:278>vbus is high!!!!!!!,pStatus->message_status=0
+[    6.900457] <MON usb_timer_det_pc_charger:311>00--device_confirm->1,USB_DET_DEVICE_DEBUOUNCING
+[    6.909987] <MON umonitor_timer_func:681>entring umonitor_timer_func,pStatus->detect_valid=1,->detect_type=3
+[    6.910029] <MON umonitor_timer_func:702>->det_phase:0 ,pStatus->device_confirm=1
+[    6.910064] <MON usb2_get_idpin_state:540>idpin_gpio value= 1
+[    6.910098] <MON usb_timer_det_pc_charger:264>entring usb_timer_det_pc_charger,/npStatus->device_confirm=1
+[    6.910366] <MON usb2_get_vbus_state:486> ret: 1,adc_val=4965,charger_support_adaptor_type=0
+[    6.910405] <MON usb2_get_vbus_state:489>usb2_get_vbus_state state: 1
+[    6.910438] <MON usb_timer_det_pc_charger:278>vbus is high!!!!!!!,pStatus->message_status=0
+[    6.910471] <MON usb2_set_dp_500k_15k:600>dpdm is 0f00104f
+[    6.910500] <MON usb_timer_det_pc_charger:320>00--device_confirm->2,USB_DET_DEVICE_DEBUOUNCING
+[    7.191371] graphics fb0: old owl_fb_pan_display: offset, 0x0
+[    7.191382] owl-fb framebuffer.9: __ofbi_set_video_info: v_info is_original_scaled 0
+[    7.191390] owl-fb framebuffer.9: v_info pitch 960, bits_per_pixel 16
+[    7.191401] owl_panel: owl_panel_get_draw_size, x3 display width -834978344 , height -834978340
+[    7.191408] owl_panel: owl_panel_get_draw_size, x3 display width -834978360 , height -834978356
+[    7.191949] Freeing fb_logo memory: 2560K (c2000000 - c2280000)
+[    7.192129] graphics fb0: owl_fb_pan_display, fb reserved memory is freed.
+[    7.209873] <MON umonitor_timer_func:681>entring umonitor_timer_func,pStatus->detect_valid=1,->detect_type=3
+[    7.209888] <MON umonitor_timer_func:702>->det_phase:0 ,pStatus->device_confirm=2
+[    7.209900] <MON usb2_get_idpin_state:540>idpin_gpio value= 1
+[    7.209909] <MON usb_timer_det_pc_charger:264>entring usb_timer_det_pc_charger,/npStatus->device_confirm=2
+[    7.210093] <MON usb2_get_vbus_state:486> ret: 1,adc_val=4943,charger_support_adaptor_type=0
+[    7.210104] <MON usb2_get_vbus_state:489>usb2_get_vbus_state state: 1
+[    7.210113] <MON usb_timer_det_pc_charger:278>vbus is high!!!!!!!,pStatus->message_status=0
+[    7.210122] <MON usb_timer_det_pc_charger:329>00--device_confirm->3,USB_DET_DEVICE_DEBUOUNCING
+[    7.239852] <MON umonitor_timer_func:681>entring umonitor_timer_func,pStatus->detect_valid=1,->detect_type=3
+[    7.239864] <MON umonitor_timer_func:702>->det_phase:0 ,pStatus->device_confirm=3
+[    7.239874] <MON usb2_get_idpin_state:540>idpin_gpio value= 1
+[    7.239883] <MON usb_timer_det_pc_charger:264>entring usb_timer_det_pc_charger,/npStatus->device_confirm=3
+[    7.240055] <MON usb2_get_vbus_state:486> ret: 1,adc_val=4958,charger_support_adaptor_type=0
+[    7.240066] <MON usb2_get_vbus_state:489>usb2_get_vbus_state state: 1
+[    7.240075] <MON usb_timer_det_pc_charger:278>vbus is high!!!!!!!,pStatus->message_status=0
+[    7.240084] <MON usb_timer_det_pc_charger:343>00--get_linestates()=0 ,to USB_DET_DEVICE_PC
+[    7.240095] <MON umonitor_timer_func:781>
+[    7.240095] /home/sjg/work/game_gy/openwrt/kernel/drivers/usb/legacy/monitor/umonitor_core.c--781, SYS_MSG_USB_B_IN
+[    7.240107] 
+[    7.240107] /home/sjg/work/game_gy/openwrt/kernel/drivers/usb/legacy/monitor/umonitor_core.c--782, SYS_MSG_USB_B_IN
+[    7.240119] /home/sjg/work/game_gy/openwrt/kernel/drivers/usb/legacy/monitor/umonitor_api.c--1185, wake_lock !!! ---MON_MSG_USB_B_IN
+[    7.240129] aotg start pc/adapter detection...
+[    7.257618] udc added
+[    7.273024] msc_nluns: 1
+[    7.273292] android_usb gadget: Mass Storage Function, version: 2009/09/11
+[    7.273311] android_usb gadget: Number of LUNs=1
+[    7.273327]  lun0: LUN: removable file: (no medium)
+[    7.273729] android_usb gadget: android_usb ready
+[    7.273744] registered gadget driver 'android_usb'
+[    7.280873] adb_open
+[    7.287411] android_usb: already disabled
+[    7.292525] open usb_serialnumber ERR
+[    7.292562] adb_bind_config
+[    7.527943] atc260x_set_usb_plugin_type, usbpc
+[    7.532425] <monitor>,usb plugin type=1. monitor_set_usb_plugin_type,1258
+[    7.607381] android_work: sent uevent USB_STATE=CONNECTED
+[    7.611527] android_work: sent uevent USB_STATE=DISCONNECTED
+[    7.707417] android_work: sent uevent USB_STATE=CONNECTED
+[    7.708437] there is no serialnum file store. use UNIFIED_UNICODE_SN forcely
+[    7.708473] usb serialnumber config is 1
+[    7.710543] android_usb gadget: high-speed config #1: android
+[    7.710973] android_work: sent uevent USB_STATE=CONFIGURED
+[    7.802491] graphics fb0: old owl_fb_pan_display: offset, 0x816
+[    7.802502] owl-fb framebuffer.9: __ofbi_set_video_info: v_info is_original_scaled 0
+[    7.802510] owl-fb framebuffer.9: v_info pitch 960, bits_per_pixel 16
+[    7.802521] owl_panel: owl_panel_get_draw_size, x3 display width -834978344 , height -834978340
+[    7.802528] owl_panel: owl_panel_get_draw_size, x3 display width -834978360 , height -834978356
+[    7.999938] <MON check_driver_state:1000>pStatus->detect_valid=0,->det_phase=0
+[    7.999985] <MON check_driver_state:1006>charger_connected=1,wake_lock_register_cnt=1
+[    8.000271] <MON usb2_get_vbus_state:486> ret: 1,adc_val=4943,charger_support_adaptor_type=0
+[    8.000312] <MON usb2_get_vbus_state:489>usb2_get_vbus_state state: 1
+[    8.512003] graphics fb0: old owl_fb_pan_display: offset, 0x1632
+[    8.512014] owl-fb framebuffer.9: __ofbi_set_video_info: v_info is_original_scaled 0
+[    8.512021] owl-fb framebuffer.9: v_info pitch 960, bits_per_pixel 16
+[    8.512033] owl_panel: owl_panel_get_draw_size, x3 display width -834978344 , height -834978340
+[    8.512039] owl_panel: owl_panel_get_draw_size, x3 display width -834978360 , height -834978356
+[    8.550171] t:25849, (0x1074033e,0x49a0c548)
+[    8.999947] <MON check_driver_state:1000>pStatus->detect_valid=0,->det_phase=0
+[    8.999997] <MON check_driver_state:1006>charger_connected=1,wake_lock_register_cnt=1
+[    9.000275] <MON usb2_get_vbus_state:486> ret: 1,adc_val=4951,charger_support_adaptor_type=0
+[    9.000315] <MON usb2_get_vbus_state:489>usb2_get_vbus_state state: 1
+[    9.222097] graphics fb0: old owl_fb_pan_display: offset, 0x0
+[    9.222108] owl-fb framebuffer.9: __ofbi_set_video_info: v_info is_original_scaled 0
+[    9.222115] owl-fb framebuffer.9: v_info pitch 960, bits_per_pixel 16
+[    9.222126] owl_panel: owl_panel_get_draw_size, x3 display width -834978344 , height -834978340
+[    9.222133] owl_panel: owl_panel_get_draw_size, x3 display width -834978360 , height -834978356
+[    9.792879] CPU3: shutdown
+[    9.932680] graphics fb0: old owl_fb_pan_display: offset, 0x816
+[    9.932692] owl-fb framebuffer.9: __ofbi_set_video_info: v_info is_original_scaled 0
+[    9.932700] owl-fb framebuffer.9: v_info pitch 960, bits_per_pixel 16
+[    9.932711] owl_panel: owl_panel_get_draw_size, x3 display width -834978344 , height -834978340
+[    9.932717] owl_panel: owl_panel_get_draw_size, x3 display width -834978360 , height -834978356
+[    9.999884] <MON check_driver_state:1000>pStatus->detect_valid=0,->det_phase=0
+[    9.999898] <MON check_driver_state:1006>charger_connected=1,wake_lock_register_cnt=1
+[   10.000308] <MON usb2_get_vbus_state:486> ret: 1,adc_val=4885,charger_support_adaptor_type=0
+[   10.000349] <MON usb2_get_vbus_state:489>usb2_get_vbus_state state: 1
+[   10.560438] t:26434, (0x1074033e,0x49a0c548)
+[   10.592797] CPU2: shutdown
+[   10.636754] graphics fb0: old owl_fb_pan_display: offset, 0x1632
+[   10.636765] owl-fb framebuffer.9: __ofbi_set_video_info: v_info is_original_scaled 0
+[   10.636773] owl-fb framebuffer.9: v_info pitch 960, bits_per_pixel 16
+[   10.636784] owl_panel: owl_panel_get_draw_size, x3 display width -834978344 , height -834978340
+[   10.636790] owl_panel: owl_panel_get_draw_size, x3 display width -834978360 , height -834978356
+[   10.757504] adbd (270): /proc/270/oom_adj is deprecated, please use /proc/270/oom_score_adj instead.
+[   10.999963] <MON check_driver_state:1000>pStatus->detect_valid=0,->det_phase=0
+[   11.000013] <MON check_driver_state:1006>charger_connected=1,wake_lock_register_cnt=1
+[   11.000289] <MON usb2_get_vbus_state:486> ret: 1,adc_val=4958,charger_support_adaptor_type=0
+[   11.000330] <MON usb2_get_vbus_state:489>usb2_get_vbus_state state: 1
+[   11.336603] graphics fb0: old owl_fb_pan_display: offset, 0x0
+[   11.336614] owl-fb framebuffer.9: __ofbi_set_video_info: v_info is_original_scaled 0
+[   11.336622] owl-fb framebuffer.9: v_info pitch 960, bits_per_pixel 16
+[   11.336633] owl_panel: owl_panel_get_draw_size, x3 display width -834978344 , height -834978340
+[   11.336639] owl_panel: owl_panel_get_draw_size, x3 display width -834978360 , height -834978356
+[   12.000091] <MON check_driver_state:1000>pStatus->detect_valid=0,->det_phase=0
+[   12.000142] <MON check_driver_state:1006>charger_connected=1,wake_lock_register_cnt=1
+[   12.000424] <MON usb2_get_vbus_state:486> ret: 1,adc_val=4943,charger_support_adaptor_type=0
+[   12.000463] <MON usb2_get_vbus_state:489>usb2_get_vbus_state state: 1
+[   12.036877] graphics fb0: old owl_fb_pan_display: offset, 0x816
+[   12.036888] owl-fb framebuffer.9: __ofbi_set_video_info: v_info is_original_scaled 0
+[   12.036896] owl-fb framebuffer.9: v_info pitch 960, bits_per_pixel 16
+[   12.036907] owl_panel: owl_panel_get_draw_size, x3 display width -834978344 , height -834978340
+[   12.036913] owl_panel: owl_panel_get_draw_size, x3 display width -834978360 , height -834978356
+[   12.039169] gpu: Power-off latency exceeded, new value 351750 ns
+[   12.192326] CPU1: shutdown
+[   12.570403] t:26629, (0x1074033e,0x49a0c548)
+[   12.739911] graphics fb0: old owl_fb_pan_display: offset, 0x1632
+[   12.739924] owl-fb framebuffer.9: __ofbi_set_video_info: v_info is_original_scaled 0
+[   12.739932] owl-fb framebuffer.9: v_info pitch 960, bits_per_pixel 16
+[   12.739944] owl_panel: owl_panel_get_draw_size, x3 display width -834978344 , height -834978340
+[   12.739950] owl_panel: owl_panel_get_draw_size, x3 display width -834978360 , height -834978356
+[   12.999959] <MON check_driver_state:1000>pStatus->detect_valid=0,->det_phase=0
+[   13.000006] <MON check_driver_state:1006>charger_connected=1,wake_lock_register_cnt=1
+[   13.000279] <MON usb2_get_vbus_state:486> ret: 1,adc_val=4951,charger_support_adaptor_type=0
+[   13.000319] <MON usb2_get_vbus_state:489>usb2_get_vbus_state state: 1
+[   13.414679] backlight owl_backlight: owl pwm bl update status
+[   13.414700] backlight owl_backlight: bl->props.power = 1
+[   13.414711] backlight owl_backlight: bl->props.fb_blank = 0
+[   13.414725] backlight owl_backlight: owl_pwm_bl_update_status: brightness = 0, power_state = 1
+[   13.999956] <MON check_driver_state:1000>pStatus->detect_valid=0,->det_phase=0
+[   14.000005] <MON check_driver_state:1006>charger_connected=1,wake_lock_register_cnt=1
+[   14.000286] <MON usb2_get_vbus_state:486> ret: 1,adc_val=4973,charger_support_adaptor_type=0
+[   14.000326] <MON usb2_get_vbus_state:489>usb2_get_vbus_state state: 1
+[   14.580382] t:26824, (0x1074033e,0x4920c548)
+[   14.852307] random: nonblocking pool is initialized
+[   14.999956] <MON check_driver_state:1000>pStatus->detect_valid=0,->det_phase=0
+[   15.000004] <MON check_driver_state:1006>charger_connected=1,wake_lock_register_cnt=1
+[   15.000281] <MON usb2_get_vbus_state:486> ret: 1,adc_val=4980,charger_support_adaptor_type=0
+[   15.000320] <MON usb2_get_vbus_state:489>usb2_get_vbus_state state: 1
+[   16.000051] <MON check_driver_state:1000>pStatus->detect_valid=0,->det_phase=0
+[   16.000101] <MON check_driver_state:1006>charger_connected=1,wake_lock_register_cnt=1
+[   16.000402] <MON usb2_get_vbus_state:486> ret: 1,adc_val=4973,charger_support_adaptor_type=0
+[   16.000445] <MON usb2_get_vbus_state:489>usb2_get_vbus_state state: 1

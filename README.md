@@ -86,3 +86,32 @@ ADB is enabled by default, with a root shell.
 Use dd to backup /dev/nand0 and/or /dev/nand0p*
 
 
+### Charge mode
+
+Following the same procedure for ADB access but with the device turned off will get it in "charge mode". System is booted in the same way, but the screen will be off and the CPU governor will be set to minimum.
+You can turn on backlight (display will remain black as there is no graphical application running) with this command:
+
+	echo 0 >/sys/class/backlight/owl_backlight/bl_power
+
+
+### chroot
+
+As "chroot" command is available, you can use it to chroot into different root file systems:
+
+	mkdir /tmp/share
+	mount /dev/mmcblk0p1 /tmp/share
+	mkdir /tmp/rootfs
+	mount -o loop /tmp/share/other_rootfs.squashfs /tmp/rootfs
+	mount -o bind /tmp /tmp/rootfs/tmp
+	mount -o bind /dev /tmp/rootfs/dev
+	mount -o bind /sys /tmp/rootfs/sys
+	mount -o bind /proc /tmp/rootfs/proc
+	mount -o bind /tmp/share /tmp/rootfs/userdata
+	chroot /tmp/rootfs /bin/bash
+
+
+### Actions fw packages
+
+Firmware packages for modern Actions devices are distributed on a single file with ".fw" extension, being this file a proprietary Actions format.
+Current "Pad Firmware Modify Tool 1.23" from Actions seems to not be compatible with non-Android packages as the one this device needs.
+There are several unknown files with "3DUfw" header inside package, but misc, recovery, system and res file systems seems to be unencrypted inside this file, so theoretically a custom fw file could be generated (needs further investigation, maybe some kind of checksum/hash is involved).
